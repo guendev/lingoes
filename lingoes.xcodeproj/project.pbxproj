@@ -15,6 +15,7 @@
 		12F86B002AA226A9003FD240 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12F86AFF2AA226A9003FD240 /* Preview Assets.xcassets */; };
 		12F86B0E2AA22D0A003FD240 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86B0D2AA22D0A003FD240 /* OnboardingView.swift */; };
 		12F86B152AA22E88003FD240 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86B142AA22E88003FD240 /* HomeView.swift */; };
+		12F86B182AA23834003FD240 /* SizeBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86B172AA23834003FD240 /* SizeBox.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		12F86B062AA22ACF003FD240 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		12F86B0D2AA22D0A003FD240 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		12F86B142AA22E88003FD240 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		12F86B172AA23834003FD240 /* SizeBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeBox.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 		12F86B0B2AA22C59003FD240 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				12F86B162AA23803003FD240 /* Views */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -159,6 +162,14 @@
 			isa = PBXGroup;
 			children = (
 				12F86B142AA22E88003FD240 /* HomeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		12F86B162AA23803003FD240 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				12F86B172AA23834003FD240 /* SizeBox.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -234,6 +245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				12F86AF32AA226A8003FD240 /* lingoesApp.swift in Sources */,
+				12F86B182AA23834003FD240 /* SizeBox.swift in Sources */,
 				12F86AF82AA226A8003FD240 /* lingoes.xcdatamodeld in Sources */,
 				12F86AFA2AA226A8003FD240 /* ContentView.swift in Sources */,
 				12F86B152AA22E88003FD240 /* HomeView.swift in Sources */,
@@ -379,7 +391,6 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -420,7 +431,6 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
