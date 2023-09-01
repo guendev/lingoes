@@ -13,6 +13,8 @@
 		12F86AFA2AA226A8003FD240 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86AF92AA226A8003FD240 /* ContentView.swift */; };
 		12F86AFC2AA226A9003FD240 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12F86AFB2AA226A9003FD240 /* Assets.xcassets */; };
 		12F86B002AA226A9003FD240 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12F86AFF2AA226A9003FD240 /* Preview Assets.xcassets */; };
+		12F86B0E2AA22D0A003FD240 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86B0D2AA22D0A003FD240 /* OnboardingView.swift */; };
+		12F86B152AA22E88003FD240 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86B142AA22E88003FD240 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,9 @@
 		12F86AFB2AA226A9003FD240 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		12F86AFD2AA226A9003FD240 /* lingoes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = lingoes.entitlements; sourceTree = "<group>"; };
 		12F86AFF2AA226A9003FD240 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		12F86B062AA22ACF003FD240 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		12F86B0D2AA22D0A003FD240 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		12F86B142AA22E88003FD240 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,13 +61,18 @@
 		12F86AF12AA226A8003FD240 /* lingoes */ = {
 			isa = PBXGroup;
 			children = (
-				12F86AF22AA226A8003FD240 /* lingoesApp.swift */,
-				12F86AF42AA226A8003FD240 /* Persistence.swift */,
-				12F86AF92AA226A8003FD240 /* ContentView.swift */,
+				12F86B0A2AA22C28003FD240 /* Helpers */,
+				12F86B092AA22C1A003FD240 /* Services */,
+				12F86B072AA22BDF003FD240 /* Screens */,
+				12F86B0B2AA22C59003FD240 /* Shared */,
+				12F86AFE2AA226A9003FD240 /* Preview Content */,
 				12F86AFB2AA226A9003FD240 /* Assets.xcassets */,
+				12F86AF92AA226A8003FD240 /* ContentView.swift */,
+				12F86B062AA22ACF003FD240 /* Info.plist */,
 				12F86AFD2AA226A9003FD240 /* lingoes.entitlements */,
 				12F86AF62AA226A8003FD240 /* lingoes.xcdatamodeld */,
-				12F86AFE2AA226A9003FD240 /* Preview Content */,
+				12F86AF22AA226A8003FD240 /* lingoesApp.swift */,
+				12F86AF42AA226A8003FD240 /* Persistence.swift */,
 			);
 			path = lingoes;
 			sourceTree = "<group>";
@@ -73,6 +83,84 @@
 				12F86AFF2AA226A9003FD240 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		12F86B072AA22BDF003FD240 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				12F86B122AA22E6E003FD240 /* Home */,
+				12F86B0C2AA22CE9003FD240 /* Onboarding */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		12F86B092AA22C1A003FD240 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		12F86B0A2AA22C28003FD240 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		12F86B0B2AA22C59003FD240 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		12F86B0C2AA22CE9003FD240 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				12F86B112AA22D80003FD240 /* Models */,
+				12F86B102AA22D6A003FD240 /* ViewModels */,
+				12F86B0F2AA22D58003FD240 /* Views */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		12F86B0F2AA22D58003FD240 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				12F86B0D2AA22D0A003FD240 /* OnboardingView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		12F86B102AA22D6A003FD240 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		12F86B112AA22D80003FD240 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		12F86B122AA22E6E003FD240 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				12F86B132AA22E7A003FD240 /* Views */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		12F86B132AA22E7A003FD240 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				12F86B142AA22E88003FD240 /* HomeView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +236,8 @@
 				12F86AF32AA226A8003FD240 /* lingoesApp.swift in Sources */,
 				12F86AF82AA226A8003FD240 /* lingoes.xcdatamodeld in Sources */,
 				12F86AFA2AA226A8003FD240 /* ContentView.swift in Sources */,
+				12F86B152AA22E88003FD240 /* HomeView.swift in Sources */,
+				12F86B0E2AA22D0A003FD240 /* OnboardingView.swift in Sources */,
 				12F86AF52AA226A8003FD240 /* Persistence.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,17 +367,20 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = lingoes/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
@@ -315,17 +408,20 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = lingoes/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
