@@ -33,6 +33,10 @@
 		12F86B4B2AA37628003FD240 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 12F86B4A2AA37628003FD240 /* GoogleService-Info.plist */; };
 		12F86B4E2AA376F0003FD240 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 12F86B4D2AA376F0003FD240 /* FirebaseAnalytics */; };
 		12F86B502AA376F0003FD240 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 12F86B4F2AA376F0003FD240 /* FirebaseAuth */; };
+		12F86B522AA38820003FD240 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86B512AA38820003FD240 /* NotificationService.swift */; };
+		12F86B602AA38BF1003FD240 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86B5F2AA38BF1003FD240 /* Toast.swift */; };
+		12F86B622AA38C2E003FD240 /* ToastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86B612AA38C2E003FD240 /* ToastViewModel.swift */; };
+		12F86B642AA38EA6003FD240 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86B632AA38EA6003FD240 /* ToastView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +67,10 @@
 		12F86B442AA34AE4003FD240 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		12F86B462AA34B62003FD240 /* MainTabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabItem.swift; sourceTree = "<group>"; };
 		12F86B4A2AA37628003FD240 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		12F86B512AA38820003FD240 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		12F86B5F2AA38BF1003FD240 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		12F86B612AA38C2E003FD240 /* ToastViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastViewModel.swift; sourceTree = "<group>"; };
+		12F86B632AA38EA6003FD240 /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +134,7 @@
 		12F86B072AA22BDF003FD240 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				12F86B5A2AA38A76003FD240 /* Toast */,
 				12F86B242AA25B93003FD240 /* Auth */,
 				12F86B482AA34DE6003FD240 /* CoursePreview */,
 				12F86B122AA22E6E003FD240 /* Home */,
@@ -138,6 +147,7 @@
 		12F86B092AA22C1A003FD240 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				12F86B5B2AA38B85003FD240 /* Notifications */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -311,6 +321,48 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		12F86B5A2AA38A76003FD240 /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				12F86B5E2AA38BE1003FD240 /* Models */,
+				12F86B5D2AA38BDA003FD240 /* ViewModels */,
+				12F86B5C2AA38BD5003FD240 /* Views */,
+			);
+			path = Toast;
+			sourceTree = "<group>";
+		};
+		12F86B5B2AA38B85003FD240 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				12F86B512AA38820003FD240 /* NotificationService.swift */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+		12F86B5C2AA38BD5003FD240 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				12F86B632AA38EA6003FD240 /* ToastView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		12F86B5D2AA38BDA003FD240 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				12F86B612AA38C2E003FD240 /* ToastViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		12F86B5E2AA38BE1003FD240 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				12F86B5F2AA38BF1003FD240 /* Toast.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -401,7 +453,9 @@
 				12F86B232AA25344003FD240 /* OnboardingControl.swift in Sources */,
 				12F86B1F2AA24E1B003FD240 /* OnBoardingViewModel.swift in Sources */,
 				12F86B372AA344E3003FD240 /* AuthSwitcher.swift in Sources */,
+				12F86B522AA38820003FD240 /* NotificationService.swift in Sources */,
 				12F86B2C2AA2E58E003FD240 /* AuthViewModel.swift in Sources */,
+				12F86B642AA38EA6003FD240 /* ToastView.swift in Sources */,
 				12F86B272AA25BA5003FD240 /* AuthView.swift in Sources */,
 				12F86B3B2AA34990003FD240 /* MainView.swift in Sources */,
 				12F86B0E2AA22D0A003FD240 /* OnboardingView.swift in Sources */,
@@ -409,6 +463,8 @@
 				12F86B302AA34185003FD240 /* AuthForm.swift in Sources */,
 				12F86B352AA34492003FD240 /* AuthMode.swift in Sources */,
 				12F86B322AA341D5003FD240 /* AuthSocial.swift in Sources */,
+				12F86B602AA38BF1003FD240 /* Toast.swift in Sources */,
+				12F86B622AA38C2E003FD240 /* ToastViewModel.swift in Sources */,
 				12F86AF52AA226A8003FD240 /* Persistence.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

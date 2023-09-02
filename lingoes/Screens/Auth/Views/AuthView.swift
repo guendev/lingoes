@@ -96,10 +96,10 @@ struct AuthView: View {
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            AuthView()
+            ContentView()
                 .environment(\.colorScheme, .light)
             
-            AuthView()
+            ContentView()
                 .environment(\.colorScheme, .dark)
         }
     }

@@ -10,18 +10,32 @@ import CoreData
 
 struct ContentView: View {
     @AppStorage("hasShownOnboarding") private var hasShownOnboarding = false
-    
+    @StateObject var toastViewModel: ToastViewModel = .init()
+
     var body: some View {
-        Group {
-            if !hasShownOnboarding {
-                MainView()
-            } else {
-                OnboardingView()
+        
+        ZStack {
+            
+            Group {
+                if !hasShownOnboarding {
+                    MainView()
+                } else {
+                    AuthView()
+                    // OnboardingView()
+                }
             }
+            
+            ToastView()
+            
         }
         .onAppear {
             hasShownOnboarding = true
         }
+        .onAppear {
+            NotificationService.shared.requestAuthorization()
+            NotificationService.shared.setup()
+        }
+        .environmentObject(toastViewModel)
     }
 }
 
@@ -34,6 +48,12 @@ extension UINavigationController {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        Group {
+            ContentView()
+                .environment(\.colorScheme, .light)
+            
+            ContentView()
+                .environment(\.colorScheme, .dark)
+        }
     }
 }

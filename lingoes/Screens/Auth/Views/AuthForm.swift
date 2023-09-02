@@ -11,6 +11,7 @@ import FirebaseAuth
 struct AuthForm: View {
     
     @EnvironmentObject var viewModel: AuthViewModel
+    @EnvironmentObject var toastViewModel: ToastViewModel
     
     func submit() async -> Void {
         if viewModel.isLoading {
@@ -19,14 +20,15 @@ struct AuthForm: View {
         
         do {
             let user = try await viewModel.submit()
-            
+                        
             if let user = user {
                 // Success
                 print(user)
+                toastViewModel.add(message: "Your login request successfull")
             }
             
         } catch {
-            print("Error: \(error)")
+            toastViewModel.add(message: error.localizedDescription, status: .error)
         }
     }
     
@@ -161,10 +163,10 @@ struct AuthForm: View {
 struct AuthForm_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            AuthView()
+            ContentView()
                 .environment(\.colorScheme, .light)
             
-            AuthView()
+            ContentView()
                 .environment(\.colorScheme, .dark)
         }
     }
