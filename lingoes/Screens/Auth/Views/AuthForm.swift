@@ -120,7 +120,7 @@ struct AuthForm: View {
                     
                 }
                 .focused($focus, equals: .password)
-                .submitLabel(.continue)
+                .submitLabel(.send)
                 .textInputAutocapitalization(.never)
                 .padding(.horizontal, 16)
                 .padding(.vertical, 15)
@@ -142,6 +142,11 @@ struct AuthForm: View {
                     .buttonStyle(.plain)
                     .padding(.trailing)
                     
+                }
+                .onSubmit {
+                    Task {
+                        await submit()
+                    }
                 }
                 
                 if !viewModel.errorPassword.isEmpty {
@@ -168,6 +173,15 @@ struct AuthForm: View {
             }
             .buttonStyle(PrimaryButtonStyle(size: .lg, block: true))
             .opacity(viewModel.isLoading ? 0.7 : 1)
+        }
+        .toolbar {
+            ToolbarItemGroup(placement: .keyboard) {
+                Spacer()
+                Button("Done") {
+                    focus = nil
+                }
+
+            }
         }
     }
 }

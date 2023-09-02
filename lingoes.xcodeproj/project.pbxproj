@@ -39,6 +39,7 @@
 		12F86B642AA38EA6003FD240 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86B632AA38EA6003FD240 /* ToastView.swift */; };
 		12F86B662AA3A094003FD240 /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86B652AA3A094003FD240 /* Keyboard.swift */; };
 		12F86B682AA3A721003FD240 /* AuthFocusableField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86B672AA3A721003FD240 /* AuthFocusableField.swift */; };
+		12F86B6A2AA3B276003FD240 /* OverlookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86B692AA3B276003FD240 /* OverlookView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +76,7 @@
 		12F86B632AA38EA6003FD240 /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
 		12F86B652AA3A094003FD240 /* Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
 		12F86B672AA3A721003FD240 /* AuthFocusableField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthFocusableField.swift; sourceTree = "<group>"; };
+		12F86B692AA3B276003FD240 /* OverlookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlookView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,7 +142,7 @@
 			children = (
 				12F86B5A2AA38A76003FD240 /* Toast */,
 				12F86B242AA25B93003FD240 /* Auth */,
-				12F86B482AA34DE6003FD240 /* CoursePreview */,
+				12F86B482AA34DE6003FD240 /* Overlook */,
 				12F86B122AA22E6E003FD240 /* Home */,
 				12F86B382AA3497A003FD240 /* Main */,
 				12F86B0C2AA22CE9003FD240 /* Onboarding */,
@@ -312,17 +314,18 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		12F86B482AA34DE6003FD240 /* CoursePreview */ = {
+		12F86B482AA34DE6003FD240 /* Overlook */ = {
 			isa = PBXGroup;
 			children = (
 				12F86B492AA34DFC003FD240 /* Views */,
 			);
-			path = CoursePreview;
+			path = Overlook;
 			sourceTree = "<group>";
 		};
 		12F86B492AA34DFC003FD240 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				12F86B692AA3B276003FD240 /* OverlookView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -472,6 +475,7 @@
 				12F86B322AA341D5003FD240 /* AuthSocial.swift in Sources */,
 				12F86B602AA38BF1003FD240 /* Toast.swift in Sources */,
 				12F86B682AA3A721003FD240 /* AuthFocusableField.swift in Sources */,
+				12F86B6A2AA3B276003FD240 /* OverlookView.swift in Sources */,
 				12F86B622AA38C2E003FD240 /* ToastViewModel.swift in Sources */,
 				12F86AF52AA226A8003FD240 /* Persistence.swift in Sources */,
 			);
