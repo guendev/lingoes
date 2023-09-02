@@ -12,27 +12,22 @@ struct AuthForm: View {
     
     @EnvironmentObject var viewModel: AuthViewModel
     
-    func signIn() async -> Void {
-        viewModel.isLoading.toggle()
-        do {
-            let authDataResult = try await Auth.auth().createUser(withEmail: viewModel.email, password: viewModel.password)
-            print(authDataResult.user)
-        } catch {
-            print(error)
+    func submit() async -> Void {
+        if viewModel.isLoading {
+            return
         }
-        viewModel.isLoading.toggle()
-    }
-    
-    func signUp() async  -> Void {
-        viewModel.isLoading.toggle()
+        
         do {
+            let user = try await viewModel.submit()
             
-            let authDataResult = try await Auth.auth().signIn(withEmail: viewModel.email, password: viewModel.password)
-
+            if let user = user {
+                // Success
+                print(user)
+            }
+            
         } catch {
-            print(error)
+            print("Error: \(error)")
         }
-        viewModel.isLoading.toggle()
     }
     
     var body: some View {
@@ -78,6 +73,12 @@ struct AuthForm: View {
                 .padding(.vertical, 15)
                 .background(Color("Background2"))
                 .cornerRadius(26)
+                            
+                if !viewModel.errorEmail.isEmpty {
+                    Text(viewModel.errorEmail)
+                        .font(.footnote)
+                        .foregroundColor(Color("Danger"))
+                }
                 
             }
             
@@ -129,25 +130,21 @@ struct AuthForm: View {
                     
                 }
                 
+                if !viewModel.errorPassword.isEmpty {
+                    Text(viewModel.errorPassword)
+                        .font(.footnote)
+                        .foregroundColor(Color("Danger"))
+                }
+                
             }
             
             SizeBox(height: 60)
             
             
             Button {
-                
-                print("0")
-                
+                                
                 Task {
-                    print("1")
-                    if !viewModel.isLoading {
-                        if viewModel.mode == .signIn {
-                            print("2")
-                            await signIn()
-                        } else {
-                            await signUp()
-                        }
-                    }
+                    await submit()
                 }
                 
             } label: {
