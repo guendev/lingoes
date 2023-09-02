@@ -15,7 +15,7 @@ class ToastViewModel: ObservableObject {
         
         toasts.insert(toast, at: 0)
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             self.toasts.removeLast()
         }
     }

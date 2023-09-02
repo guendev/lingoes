@@ -37,6 +37,8 @@
 		12F86B602AA38BF1003FD240 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86B5F2AA38BF1003FD240 /* Toast.swift */; };
 		12F86B622AA38C2E003FD240 /* ToastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86B612AA38C2E003FD240 /* ToastViewModel.swift */; };
 		12F86B642AA38EA6003FD240 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86B632AA38EA6003FD240 /* ToastView.swift */; };
+		12F86B662AA3A094003FD240 /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86B652AA3A094003FD240 /* Keyboard.swift */; };
+		12F86B682AA3A721003FD240 /* AuthFocusableField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86B672AA3A721003FD240 /* AuthFocusableField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +73,8 @@
 		12F86B5F2AA38BF1003FD240 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		12F86B612AA38C2E003FD240 /* ToastViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastViewModel.swift; sourceTree = "<group>"; };
 		12F86B632AA38EA6003FD240 /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
+		12F86B652AA3A094003FD240 /* Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
+		12F86B672AA3A721003FD240 /* AuthFocusableField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthFocusableField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +159,7 @@
 		12F86B0A2AA22C28003FD240 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				12F86B652AA3A094003FD240 /* Keyboard.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -266,6 +271,7 @@
 			isa = PBXGroup;
 			children = (
 				12F86B342AA34492003FD240 /* AuthMode.swift */,
+				12F86B672AA3A721003FD240 /* AuthFocusableField.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -459,11 +465,13 @@
 				12F86B272AA25BA5003FD240 /* AuthView.swift in Sources */,
 				12F86B3B2AA34990003FD240 /* MainView.swift in Sources */,
 				12F86B0E2AA22D0A003FD240 /* OnboardingView.swift in Sources */,
+				12F86B662AA3A094003FD240 /* Keyboard.swift in Sources */,
 				12F86B452AA34AE4003FD240 /* MainViewModel.swift in Sources */,
 				12F86B302AA34185003FD240 /* AuthForm.swift in Sources */,
 				12F86B352AA34492003FD240 /* AuthMode.swift in Sources */,
 				12F86B322AA341D5003FD240 /* AuthSocial.swift in Sources */,
 				12F86B602AA38BF1003FD240 /* Toast.swift in Sources */,
+				12F86B682AA3A721003FD240 /* AuthFocusableField.swift in Sources */,
 				12F86B622AA38C2E003FD240 /* ToastViewModel.swift in Sources */,
 				12F86AF52AA226A8003FD240 /* Persistence.swift in Sources */,
 			);

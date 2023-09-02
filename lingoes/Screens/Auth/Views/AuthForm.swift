@@ -13,6 +13,8 @@ struct AuthForm: View {
     @EnvironmentObject var viewModel: AuthViewModel
     @EnvironmentObject var toastViewModel: ToastViewModel
     
+    @FocusState var focus: AuthFocusableField?
+    
     func submit() async -> Void {
         if viewModel.isLoading {
             return
@@ -43,11 +45,14 @@ struct AuthForm: View {
                         .font(.callout)
                         .fontWeight(.semibold)
                         .foregroundColor(Color("Text"))
+                    
                                         
                     TextField(text: $viewModel.name) {
                         Text("Enter your name")
                             .foregroundColor(Color("Text2"))
                     }
+                    .submitLabel(.next)
+                    .focused($focus, equals: .name)
                     .textInputAutocapitalization(.never)
                     .padding(.horizontal, 16)
                     .padding(.vertical, 15)
@@ -70,6 +75,8 @@ struct AuthForm: View {
                     Text("Enter your email")
                         .foregroundColor(Color("Text2"))
                 }
+                .submitLabel(.next)
+                .focused($focus, equals: .email)
                 .textInputAutocapitalization(.never)
                 .padding(.horizontal, 16)
                 .padding(.vertical, 15)
@@ -100,7 +107,7 @@ struct AuthForm: View {
                             Text("Enter your password")
                                 .foregroundColor(Color("Text2"))
                         }
-                        
+
                     } else {
                         SecureField(text: $viewModel.password) {
                             Text("Enter your password")
@@ -109,6 +116,8 @@ struct AuthForm: View {
                     }
                     
                 }
+                .focused($focus, equals: .password)
+                .submitLabel(.continue)
                 .textInputAutocapitalization(.never)
                 .padding(.horizontal, 16)
                 .padding(.vertical, 15)

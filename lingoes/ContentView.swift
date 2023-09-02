@@ -35,6 +35,9 @@ struct ContentView: View {
             NotificationService.shared.requestAuthorization()
             NotificationService.shared.setup()
         }
+        .onTapGesture {
+            // hideKeyboard()
+        }
         .environmentObject(toastViewModel)
     }
 }
