@@ -16,9 +16,11 @@ struct AuthForm: View {
     @FocusState var focus: AuthFocusableField?
     
     func submit() async -> Void {
-        if viewModel.isLoading {
+        if viewModel.isLoading || !viewModel.validate() {
             return
         }
+        
+        viewModel.isLoading.toggle()
         
         do {
             let user = try await viewModel.submit()
@@ -32,6 +34,7 @@ struct AuthForm: View {
         } catch {
             toastViewModel.add(message: error.localizedDescription, status: .error)
         }
+        viewModel.isLoading.toggle()
     }
     
     var body: some View {

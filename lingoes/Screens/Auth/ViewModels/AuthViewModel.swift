@@ -80,27 +80,19 @@ import FirebaseAuth
     }
 
     func submit() async throws -> User? {
-        if validate() {
-            isLoading = true
-            
-            if mode == .signIn {
-                do {
-                    let user = try await signIn()
-                    isLoading = false
-                    return user
-                } catch {
-                    isLoading = false
-                    throw error
-                }
-            } else {
-                do {
-                    let user = try await signUp()
-                    isLoading = false
-                    return user
-                } catch {
-                    isLoading = false
-                    throw error
-                }
+        if mode == .signIn {
+            do {
+                let user = try await signIn()
+                return user
+            } catch {
+                throw error
+            }
+        } else {
+            do {
+                let user = try await signUp()
+                return user
+            } catch {
+                throw error
             }
         }
         
