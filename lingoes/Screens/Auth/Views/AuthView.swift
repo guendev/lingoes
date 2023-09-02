@@ -10,6 +10,7 @@ import SwiftUI
 struct AuthView: View {
     
     @StateObject var viewModel: AuthViewModel = .init()
+    @Environment(\.dismiss) var dismiss
     
     var body: some View {
         VStack(spacing: 0) {
@@ -17,6 +18,8 @@ struct AuthView: View {
             HStack {
                 
                 Button {
+                    
+                    dismiss()
                     
                 } label: {
                     Image(systemName: "arrow.left")
@@ -55,38 +58,32 @@ struct AuthView: View {
             
             ScrollView(showsIndicators: false) {
                 
-                VStack(spacing: 30) {
+                VStack(spacing: 0) {
                     
-                    InputView (
-                        value: $viewModel.email,
-                        label: "Email or Phone Number",
-                        placeholder: "Enter your email"
-                    )
+                    AuthForm()
                     
-                    InputView(
-                        value: $viewModel.password,
-                        label: "Password",
-                        placeholder: "Enter your password"
-                    )
+                    SizeBox(height: 40)
+                    
+                    Text("Or using other method")
+                        .font(.subheadline)
+                        .foregroundColor(Color(red: 0.58, green: 0.59, blue: 0.65))
+                    
+                    SizeBox(height: 40)
+
+                    AuthSocial()
                     
                 }
+                .padding(.horizontal)
                 
             }
-            .padding(.horizontal)
             .frame(maxWidth: .infinity, alignment: .leading)
             
             SizeBox(height: 30)
             
-            Text("Don’t have an account? ")
-                .font(.subheadline)
-                .foregroundColor(Color(red: 0.58, green: 0.59, blue: 0.65))
-            
-            + Text("Register")
-                .font(.subheadline)
-                .fontWeight(.semibold)
-                .foregroundColor(.accentColor)
+            AuthSwitcher()
         
         }
+        .environmentObject(viewModel)
     }
 }
 

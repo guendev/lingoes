@@ -21,7 +21,10 @@
 		12F86B232AA25344003FD240 /* OnboardingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86B222AA25344003FD240 /* OnboardingControl.swift */; };
 		12F86B272AA25BA5003FD240 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86B262AA25BA5003FD240 /* AuthView.swift */; };
 		12F86B2C2AA2E58E003FD240 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86B2B2AA2E58E003FD240 /* AuthViewModel.swift */; };
-		12F86B2E2AA2E70A003FD240 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86B2D2AA2E70A003FD240 /* InputView.swift */; };
+		12F86B302AA34185003FD240 /* AuthForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86B2F2AA34185003FD240 /* AuthForm.swift */; };
+		12F86B322AA341D5003FD240 /* AuthSocial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86B312AA341D5003FD240 /* AuthSocial.swift */; };
+		12F86B352AA34492003FD240 /* AuthMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86B342AA34492003FD240 /* AuthMode.swift */; };
+		12F86B372AA344E3003FD240 /* AuthSwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86B362AA344E3003FD240 /* AuthSwitcher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,7 +45,10 @@
 		12F86B222AA25344003FD240 /* OnboardingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingControl.swift; sourceTree = "<group>"; };
 		12F86B262AA25BA5003FD240 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		12F86B2B2AA2E58E003FD240 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
-		12F86B2D2AA2E70A003FD240 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
+		12F86B2F2AA34185003FD240 /* AuthForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthForm.swift; sourceTree = "<group>"; };
+		12F86B312AA341D5003FD240 /* AuthSocial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSocial.swift; sourceTree = "<group>"; };
+		12F86B342AA34492003FD240 /* AuthMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthMode.swift; sourceTree = "<group>"; };
+		12F86B362AA344E3003FD240 /* AuthSwitcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSwitcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,7 +192,6 @@
 			isa = PBXGroup;
 			children = (
 				12F86B172AA23834003FD240 /* SizeBox.swift */,
-				12F86B2D2AA2E70A003FD240 /* InputView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -202,6 +207,7 @@
 		12F86B242AA25B93003FD240 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				12F86B332AA34485003FD240 /* Models */,
 				12F86B2A2AA2E580003FD240 /* ViewModels */,
 				12F86B252AA25B99003FD240 /* Views */,
 			);
@@ -212,6 +218,9 @@
 			isa = PBXGroup;
 			children = (
 				12F86B262AA25BA5003FD240 /* AuthView.swift */,
+				12F86B2F2AA34185003FD240 /* AuthForm.swift */,
+				12F86B312AA341D5003FD240 /* AuthSocial.swift */,
+				12F86B362AA344E3003FD240 /* AuthSwitcher.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -222,6 +231,14 @@
 				12F86B2B2AA2E58E003FD240 /* AuthViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		12F86B332AA34485003FD240 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				12F86B342AA34492003FD240 /* AuthMode.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,7 +311,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12F86B2E2AA2E70A003FD240 /* InputView.swift in Sources */,
 				12F86AF32AA226A8003FD240 /* lingoesApp.swift in Sources */,
 				12F86B182AA23834003FD240 /* SizeBox.swift in Sources */,
 				12F86AF82AA226A8003FD240 /* lingoes.xcdatamodeld in Sources */,
@@ -303,9 +319,13 @@
 				12F86B152AA22E88003FD240 /* HomeView.swift in Sources */,
 				12F86B232AA25344003FD240 /* OnboardingControl.swift in Sources */,
 				12F86B1F2AA24E1B003FD240 /* OnBoardingViewModel.swift in Sources */,
+				12F86B372AA344E3003FD240 /* AuthSwitcher.swift in Sources */,
 				12F86B2C2AA2E58E003FD240 /* AuthViewModel.swift in Sources */,
 				12F86B272AA25BA5003FD240 /* AuthView.swift in Sources */,
 				12F86B0E2AA22D0A003FD240 /* OnboardingView.swift in Sources */,
+				12F86B302AA34185003FD240 /* AuthForm.swift in Sources */,
+				12F86B352AA34492003FD240 /* AuthMode.swift in Sources */,
+				12F86B322AA341D5003FD240 /* AuthSocial.swift in Sources */,
 				12F86AF52AA226A8003FD240 /* Persistence.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
