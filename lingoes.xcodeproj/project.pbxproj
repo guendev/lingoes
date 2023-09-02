@@ -20,6 +20,8 @@
 		12F86B1F2AA24E1B003FD240 /* OnBoardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86B1E2AA24E1B003FD240 /* OnBoardingViewModel.swift */; };
 		12F86B232AA25344003FD240 /* OnboardingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86B222AA25344003FD240 /* OnboardingControl.swift */; };
 		12F86B272AA25BA5003FD240 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86B262AA25BA5003FD240 /* AuthView.swift */; };
+		12F86B2C2AA2E58E003FD240 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86B2B2AA2E58E003FD240 /* AuthViewModel.swift */; };
+		12F86B2E2AA2E70A003FD240 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86B2D2AA2E70A003FD240 /* InputView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,8 @@
 		12F86B1E2AA24E1B003FD240 /* OnBoardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewModel.swift; sourceTree = "<group>"; };
 		12F86B222AA25344003FD240 /* OnboardingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingControl.swift; sourceTree = "<group>"; };
 		12F86B262AA25BA5003FD240 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
+		12F86B2B2AA2E58E003FD240 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		12F86B2D2AA2E70A003FD240 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				12F86B172AA23834003FD240 /* SizeBox.swift */,
+				12F86B2D2AA2E70A003FD240 /* InputView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -197,6 +202,7 @@
 		12F86B242AA25B93003FD240 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				12F86B2A2AA2E580003FD240 /* ViewModels */,
 				12F86B252AA25B99003FD240 /* Views */,
 			);
 			path = Auth;
@@ -208,6 +214,14 @@
 				12F86B262AA25BA5003FD240 /* AuthView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		12F86B2A2AA2E580003FD240 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				12F86B2B2AA2E58E003FD240 /* AuthViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,6 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12F86B2E2AA2E70A003FD240 /* InputView.swift in Sources */,
 				12F86AF32AA226A8003FD240 /* lingoesApp.swift in Sources */,
 				12F86B182AA23834003FD240 /* SizeBox.swift in Sources */,
 				12F86AF82AA226A8003FD240 /* lingoes.xcdatamodeld in Sources */,
@@ -288,6 +303,7 @@
 				12F86B152AA22E88003FD240 /* HomeView.swift in Sources */,
 				12F86B232AA25344003FD240 /* OnboardingControl.swift in Sources */,
 				12F86B1F2AA24E1B003FD240 /* OnBoardingViewModel.swift in Sources */,
+				12F86B2C2AA2E58E003FD240 /* AuthViewModel.swift in Sources */,
 				12F86B272AA25BA5003FD240 /* AuthView.swift in Sources */,
 				12F86B0E2AA22D0A003FD240 /* OnboardingView.swift in Sources */,
 				12F86AF52AA226A8003FD240 /* Persistence.swift in Sources */,
