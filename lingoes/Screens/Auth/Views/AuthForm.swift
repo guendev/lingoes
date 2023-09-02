@@ -21,15 +21,15 @@ struct AuthForm: View {
                     Text("Name")
                         .font(.callout)
                         .fontWeight(.semibold)
-                        .foregroundColor(Color(red: 0.09, green: 0.11, blue: 0.18))
+                        .foregroundColor(Color("Text"))
                                         
                     TextField(text: $viewModel.name) {
                         Text("Enter your name")
-                            .foregroundColor(Color(red: 0.58, green: 0.59, blue: 0.65))
+                            .foregroundColor(Color("Text2"))
                     }
                     .padding(.horizontal, 16)
                     .padding(.vertical, 15)
-                    .background(Color(red: 0.98, green: 0.98, blue: 0.98))
+                    .background(Color("Background2"))
                     .cornerRadius(26)
                     
                 }
@@ -42,15 +42,15 @@ struct AuthForm: View {
                 Text("Email or Phone Number")
                     .font(.callout)
                     .fontWeight(.semibold)
-                    .foregroundColor(Color(red: 0.09, green: 0.11, blue: 0.18))
+                    .foregroundColor(Color("Text"))
                                     
                 TextField(text: $viewModel.email) {
                     Text("Enter your email")
-                        .foregroundColor(Color(red: 0.58, green: 0.59, blue: 0.65))
+                        .foregroundColor(Color("Text2"))
                 }
                 .padding(.horizontal, 16)
                 .padding(.vertical, 15)
-                .background(Color(red: 0.98, green: 0.98, blue: 0.98))
+                .background(Color("Background2"))
                 .cornerRadius(26)
                 
             }
@@ -62,20 +62,20 @@ struct AuthForm: View {
                 Text("Password")
                     .font(.callout)
                     .fontWeight(.semibold)
-                    .foregroundColor(Color(red: 0.09, green: 0.11, blue: 0.18))
+                    .foregroundColor(Color("Text"))
                                     
                 Group {
                     if viewModel.isShowPassword {
                         
                         TextField(text: $viewModel.password) {
                             Text("Enter your password")
-                                .foregroundColor(Color(red: 0.58, green: 0.59, blue: 0.65))
+                                .foregroundColor(Color("Text2"))
                         }
                         
                     } else {
                         SecureField(text: $viewModel.password) {
                             Text("Enter your password")
-                                .foregroundColor(Color(red: 0.58, green: 0.59, blue: 0.65))
+                                .foregroundColor(Color("Text2"))
                         }
                     }
                     
@@ -83,7 +83,7 @@ struct AuthForm: View {
                 .padding(.horizontal, 16)
                 .padding(.vertical, 15)
                 .padding(.trailing, 40)
-                .background(Color(red: 0.98, green: 0.98, blue: 0.98))
+                .background(Color("Background2"))
                 .cornerRadius(26)
                 .overlay(alignment: .trailing) {
                     
@@ -95,7 +95,7 @@ struct AuthForm: View {
                         
                     } label: {
                         Image(systemName: viewModel.isShowPassword ? "eye.slash" : "eye")
-                            .foregroundColor(Color(red: 0.58, green: 0.59, blue: 0.65))
+                            .foregroundColor(Color("Text2"))
                     }
                     .buttonStyle(.plain)
                     .padding(.trailing)
@@ -121,6 +121,12 @@ struct AuthForm: View {
 
 struct AuthForm_Previews: PreviewProvider {
     static var previews: some View {
-        AuthView()
+        Group {
+            AuthView()
+                .environment(\.colorScheme, .light)
+            
+            AuthView()
+                .environment(\.colorScheme, .dark)
+        }
     }
 }

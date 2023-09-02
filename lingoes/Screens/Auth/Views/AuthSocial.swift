@@ -10,8 +10,8 @@ import SwiftUI
 struct AuthSocial: View {
     
     var buttonStyle: BorderButtonStyle = BorderButtonStyle(
-        textColor: Color(red: 0.09, green: 0.11, blue: 0.18),
-        color: Color(red: 0.94, green: 0.94, blue: 0.98),
+        textColor: Color("Text"),
+        color: Color("Border"),
         size: .lg,
         block: true
     )
@@ -30,7 +30,7 @@ struct AuthSocial: View {
                 Image("google")
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 36)
+                    .frame(width: 32)
                     .offset(x: 7)
                 
             }
@@ -46,7 +46,7 @@ struct AuthSocial: View {
                 Image("facebook")
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 36)
+                    .frame(width: 32)
                     .offset(x: 7)
 
             }
@@ -58,6 +58,12 @@ struct AuthSocial: View {
 
 struct AuthSocial_Previews: PreviewProvider {
     static var previews: some View {
-        AuthView()
+        Group {
+            AuthView()
+                .environment(\.colorScheme, .light)
+            
+            AuthView()
+                .environment(\.colorScheme, .dark)
+        }
     }
 }

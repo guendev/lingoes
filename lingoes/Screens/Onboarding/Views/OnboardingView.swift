@@ -25,18 +25,16 @@ struct OnboardingView: View {
                 
                 // Display xs/Semibold
                 Text("Discover Event Near By You")
-                    .font(
-                        Font.custom("Poppins", size: 22)
-                            .weight(.semibold)
-                    )
-                    .foregroundColor(.white)
+                    .font(.title3)
+                    .fontWeight(.semibold)
+                    .foregroundColor(Color("Text"))
                 
                 SizeBox(height: 12)
                 
                 // Text md/Regular
                 Text("Vel ut nunc a sodales tellus nisl. Bibendum arcu feugiat in aenean ultricies ac vulputate.")
-                    .font(Font.custom("Poppins", size: 14))
-                    .foregroundColor(Color(red: 0.58, green: 0.59, blue: 0.65))
+                    .font(.footnote)
+                    .foregroundColor(Color("Text2"))
                 
                 SizeBox(height: 40)
                 
@@ -69,6 +67,12 @@ struct OnboardingView: View {
 
 struct OnboardingView_Previews: PreviewProvider {
     static var previews: some View {
-        OnboardingView()
+        Group {
+            OnboardingView()
+                .environment(\.colorScheme, .light)
+            
+            OnboardingView()
+                .environment(\.colorScheme, .dark)
+        }
     }
 }

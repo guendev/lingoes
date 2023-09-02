@@ -13,6 +13,7 @@ struct AuthView: View {
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
+        
         VStack(spacing: 0) {
             
             HStack {
@@ -26,7 +27,7 @@ struct AuthView: View {
                         .frame(width: 42, height: 42)
                         .overlay {
                             RoundedRectangle(cornerRadius: 40)
-                                .stroke(Color(red: 0.94, green: 0.94, blue: 0.98), lineWidth: 1)
+                                .stroke(Color("Border"), lineWidth: 1)
                         }
                 }
                 .buttonStyle(.plain)
@@ -40,7 +41,7 @@ struct AuthView: View {
                         .frame(width: 42, height: 42)
                         .overlay {
                             RoundedRectangle(cornerRadius: 40)
-                                .stroke(Color(red: 0.94, green: 0.94, blue: 0.98), lineWidth: 1)
+                                .stroke(Color("Border"), lineWidth: 1)
                         }
                 }
                 .buttonStyle(.plain)
@@ -51,7 +52,7 @@ struct AuthView: View {
                 Text("Login")
                     .font(.title3)
                     .fontWeight(.semibold)
-                    .foregroundColor(Color(red: 0.09, green: 0.11, blue: 0.18))
+                    .foregroundColor(Color("Text"))
             }
             
             SizeBox(height: 30)
@@ -66,7 +67,7 @@ struct AuthView: View {
                     
                     Text("Or using other method")
                         .font(.subheadline)
-                        .foregroundColor(Color(red: 0.58, green: 0.59, blue: 0.65))
+                        .foregroundColor(Color("Text2"))
                     
                     SizeBox(height: 40)
 
@@ -83,12 +84,23 @@ struct AuthView: View {
             AuthSwitcher()
         
         }
+        .background {
+            Color("Background")
+                .edgesIgnoringSafeArea(.all)
+        }
         .environmentObject(viewModel)
+        
     }
 }
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        AuthView()
+        Group {
+            AuthView()
+                .environment(\.colorScheme, .light)
+            
+            AuthView()
+                .environment(\.colorScheme, .dark)
+        }
     }
 }
