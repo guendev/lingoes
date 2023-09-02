@@ -30,6 +30,9 @@
 		12F86B422AA34AB5003FD240 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86B412AA34AB5003FD240 /* MainTabView.swift */; };
 		12F86B452AA34AE4003FD240 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86B442AA34AE4003FD240 /* MainViewModel.swift */; };
 		12F86B472AA34B62003FD240 /* MainTabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86B462AA34B62003FD240 /* MainTabItem.swift */; };
+		12F86B4B2AA37628003FD240 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 12F86B4A2AA37628003FD240 /* GoogleService-Info.plist */; };
+		12F86B4E2AA376F0003FD240 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 12F86B4D2AA376F0003FD240 /* FirebaseAnalytics */; };
+		12F86B502AA376F0003FD240 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 12F86B4F2AA376F0003FD240 /* FirebaseAuth */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +62,7 @@
 		12F86B412AA34AB5003FD240 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		12F86B442AA34AE4003FD240 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		12F86B462AA34B62003FD240 /* MainTabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabItem.swift; sourceTree = "<group>"; };
+		12F86B4A2AA37628003FD240 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12F86B4E2AA376F0003FD240 /* FirebaseAnalytics in Frameworks */,
+				12F86B502AA376F0003FD240 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +109,7 @@
 				12F86AFD2AA226A9003FD240 /* lingoes.entitlements */,
 				12F86AF62AA226A8003FD240 /* lingoes.xcdatamodeld */,
 				12F86AF22AA226A8003FD240 /* lingoesApp.swift */,
+				12F86B4A2AA37628003FD240 /* GoogleService-Info.plist */,
 				12F86AF42AA226A8003FD240 /* Persistence.swift */,
 			);
 			path = lingoes;
@@ -320,6 +327,10 @@
 			dependencies = (
 			);
 			name = lingoes;
+			packageProductDependencies = (
+				12F86B4D2AA376F0003FD240 /* FirebaseAnalytics */,
+				12F86B4F2AA376F0003FD240 /* FirebaseAuth */,
+			);
 			productName = lingoes;
 			productReference = 12F86AEF2AA226A8003FD240 /* lingoes.app */;
 			productType = "com.apple.product-type.application";
@@ -348,6 +359,9 @@
 				Base,
 			);
 			mainGroup = 12F86AE62AA226A8003FD240;
+			packageReferences = (
+				12F86B4C2AA376F0003FD240 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 12F86AF02AA226A8003FD240 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -364,6 +378,7 @@
 			files = (
 				12F86B002AA226A9003FD240 /* Preview Assets.xcassets in Resources */,
 				12F86AFC2AA226A9003FD240 /* Assets.xcassets in Resources */,
+				12F86B4B2AA37628003FD240 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -524,18 +539,19 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = lingoes/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Lingoes;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
-				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
@@ -564,18 +580,19 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = lingoes/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Lingoes;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
-				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
@@ -612,6 +629,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		12F86B4C2AA376F0003FD240 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		12F86B4D2AA376F0003FD240 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 12F86B4C2AA376F0003FD240 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		12F86B4F2AA376F0003FD240 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 12F86B4C2AA376F0003FD240 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		12F86AF62AA226A8003FD240 /* lingoes.xcdatamodeld */ = {

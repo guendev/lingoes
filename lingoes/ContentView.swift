@@ -13,7 +13,7 @@ struct ContentView: View {
     
     var body: some View {
         Group {
-            if hasShownOnboarding {
+            if !hasShownOnboarding {
                 MainView()
             } else {
                 OnboardingView()

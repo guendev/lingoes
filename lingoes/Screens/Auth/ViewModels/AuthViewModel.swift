@@ -17,4 +17,6 @@ class AuthViewModel: ObservableObject {
     
     @Published var isShowPassword: Bool = false
     
+    @Published var isLoading: Bool = false
+    
 }

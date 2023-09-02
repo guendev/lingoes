@@ -6,10 +6,34 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct AuthForm: View {
     
     @EnvironmentObject var viewModel: AuthViewModel
+    
+    func signIn() async -> Void {
+        viewModel.isLoading.toggle()
+        do {
+            let authDataResult = try await Auth.auth().createUser(withEmail: viewModel.email, password: viewModel.password)
+            print(authDataResult.user)
+        } catch {
+            print(error)
+        }
+        viewModel.isLoading.toggle()
+    }
+    
+    func signUp() async  -> Void {
+        viewModel.isLoading.toggle()
+        do {
+            
+            let authDataResult = try await Auth.auth().signIn(withEmail: viewModel.email, password: viewModel.password)
+
+        } catch {
+            print(error)
+        }
+        viewModel.isLoading.toggle()
+    }
     
     var body: some View {
         
@@ -27,6 +51,7 @@ struct AuthForm: View {
                         Text("Enter your name")
                             .foregroundColor(Color("Text2"))
                     }
+                    .textInputAutocapitalization(.never)
                     .padding(.horizontal, 16)
                     .padding(.vertical, 15)
                     .background(Color("Background2"))
@@ -48,6 +73,7 @@ struct AuthForm: View {
                     Text("Enter your email")
                         .foregroundColor(Color("Text2"))
                 }
+                .textInputAutocapitalization(.never)
                 .padding(.horizontal, 16)
                 .padding(.vertical, 15)
                 .background(Color("Background2"))
@@ -80,6 +106,7 @@ struct AuthForm: View {
                     }
                     
                 }
+                .textInputAutocapitalization(.never)
                 .padding(.horizontal, 16)
                 .padding(.vertical, 15)
                 .padding(.trailing, 40)
@@ -109,12 +136,27 @@ struct AuthForm: View {
             
             Button {
                 
+                print("0")
+                
+                Task {
+                    print("1")
+                    if !viewModel.isLoading {
+                        if viewModel.mode == .signIn {
+                            print("2")
+                            await signIn()
+                        } else {
+                            await signUp()
+                        }
+                    }
+                }
+                
             } label: {
                 
                 Text(viewModel.mode == .signIn ? "Sign In" : "Sign Up")
                 
             }
             .buttonStyle(PrimaryButtonStyle(size: .lg, block: true))
+            .opacity(viewModel.isLoading ? 0.7 : 1)
         }
     }
 }
