@@ -33,6 +33,10 @@ struct SettingsView: View {
                     
                     SettingsOverview()
                     
+                    SizeBox(height: 30)
+                    
+                    SettingsMenu()
+                    
                 }
                 .padding(.horizontal)
                 

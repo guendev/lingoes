@@ -48,6 +48,7 @@
 		12F86B7A2AA4284D003FD240 /* SettingOverviewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86B792AA4284D003FD240 /* SettingOverviewItem.swift */; };
 		12F86B7D2AA42F35003FD240 /* WrappingHStack in Frameworks */ = {isa = PBXBuildFile; productRef = 12F86B7C2AA42F35003FD240 /* WrappingHStack */; };
 		12F86B802AA43185003FD240 /* ViewSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86B7F2AA43185003FD240 /* ViewSize.swift */; };
+		12F86B822AA43CF7003FD240 /* SettingsMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86B812AA43CF7003FD240 /* SettingsMenu.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +93,7 @@
 		12F86B772AA41F57003FD240 /* SettingsOverview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsOverview.swift; sourceTree = "<group>"; };
 		12F86B792AA4284D003FD240 /* SettingOverviewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingOverviewItem.swift; sourceTree = "<group>"; };
 		12F86B7F2AA43185003FD240 /* ViewSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewSize.swift; sourceTree = "<group>"; };
+		12F86B812AA43CF7003FD240 /* SettingsMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsMenu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -408,6 +410,7 @@
 				12F86B712AA417BA003FD240 /* SettingsView.swift */,
 				12F86B752AA41EDE003FD240 /* SettingUser.swift */,
 				12F86B772AA41F57003FD240 /* SettingsOverview.swift */,
+				12F86B812AA43CF7003FD240 /* SettingsMenu.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -542,6 +545,7 @@
 				12F86B452AA34AE4003FD240 /* MainViewModel.swift in Sources */,
 				12F86B302AA34185003FD240 /* AuthForm.swift in Sources */,
 				12F86B352AA34492003FD240 /* AuthMode.swift in Sources */,
+				12F86B822AA43CF7003FD240 /* SettingsMenu.swift in Sources */,
 				12F86B322AA341D5003FD240 /* AuthSocial.swift in Sources */,
 				12F86B602AA38BF1003FD240 /* Toast.swift in Sources */,
 				12F86B682AA3A721003FD240 /* AuthFocusableField.swift in Sources */,

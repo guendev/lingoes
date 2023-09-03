@@ -43,6 +43,10 @@ struct MainTabView: View {
                 
             }
         }
+        .background {
+            Color("Background")
+                .edgesIgnoringSafeArea(.bottom)
+        }
         .overlay(alignment: .top) {
             Rectangle()
                 .frame(height: 1)
