@@ -11,7 +11,7 @@ struct IconButtonStyle: ButtonStyle {
     var size: CGFloat?
     var color: Color?
     var background: Color?
-    var borderBorder: Color?
+    var borderColor: Color?
     
     func getSize() -> CGFloat {
         size ?? 38
@@ -23,7 +23,7 @@ struct IconButtonStyle: ButtonStyle {
             .frame(width: getSize(), height: getSize())
             .overlay {
                 RoundedRectangle(cornerRadius: getSize())
-                    .stroke(borderBorder ?? Color("Border"), lineWidth: 1)
+                    .stroke(borderColor ?? Color("Border"), lineWidth: 1)
             }
             .background {
                 RoundedRectangle(cornerRadius: getSize())

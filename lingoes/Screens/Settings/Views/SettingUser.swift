@@ -47,15 +47,6 @@ struct SettingUser: View {
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             
-            
-            Button {
-        
-                
-            } label: {
-                Image(systemName: "gear")
-            }
-            .buttonStyle(IconButtonStyle(borderBorder: .clear))
-            
         }
     }
 }

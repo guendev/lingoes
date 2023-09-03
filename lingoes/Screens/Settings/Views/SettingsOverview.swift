@@ -58,7 +58,7 @@ struct SettingsOverview: View {
             } label: {
                 Image(systemName: data.icon)
             }
-            .buttonStyle(IconButtonStyle(size: 42, color: .white, background: data.backgroud, borderBorder: .clear))
+            .buttonStyle(IconButtonStyle(size: 42, color: .white, background: data.backgroud, borderColor: .clear))
 
             
             VStack(alignment: .leading, spacing: 3) {

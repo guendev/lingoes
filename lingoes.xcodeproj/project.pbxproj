@@ -49,6 +49,8 @@
 		12F86B7D2AA42F35003FD240 /* WrappingHStack in Frameworks */ = {isa = PBXBuildFile; productRef = 12F86B7C2AA42F35003FD240 /* WrappingHStack */; };
 		12F86B802AA43185003FD240 /* ViewSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86B7F2AA43185003FD240 /* ViewSize.swift */; };
 		12F86B822AA43CF7003FD240 /* SettingsMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86B812AA43CF7003FD240 /* SettingsMenu.swift */; };
+		12F86B842AA44561003FD240 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86B832AA44561003FD240 /* SettingsViewModel.swift */; };
+		12F86B882AA47541003FD240 /* SettingMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86B872AA47541003FD240 /* SettingMenuItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +96,8 @@
 		12F86B792AA4284D003FD240 /* SettingOverviewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingOverviewItem.swift; sourceTree = "<group>"; };
 		12F86B7F2AA43185003FD240 /* ViewSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewSize.swift; sourceTree = "<group>"; };
 		12F86B812AA43CF7003FD240 /* SettingsMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsMenu.swift; sourceTree = "<group>"; };
+		12F86B832AA44561003FD240 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		12F86B872AA47541003FD240 /* SettingMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingMenuItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -418,6 +422,7 @@
 		12F86B6F2AA4179C003FD240 /* ViewsModels */ = {
 			isa = PBXGroup;
 			children = (
+				12F86B832AA44561003FD240 /* SettingsViewModel.swift */,
 			);
 			path = ViewsModels;
 			sourceTree = "<group>";
@@ -426,6 +431,7 @@
 			isa = PBXGroup;
 			children = (
 				12F86B792AA4284D003FD240 /* SettingOverviewItem.swift */,
+				12F86B872AA47541003FD240 /* SettingMenuItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -518,6 +524,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12F86B882AA47541003FD240 /* SettingMenuItem.swift in Sources */,
 				12F86AF32AA226A8003FD240 /* lingoesApp.swift in Sources */,
 				12F86B182AA23834003FD240 /* SizeBox.swift in Sources */,
 				12F86AF82AA226A8003FD240 /* lingoes.xcdatamodeld in Sources */,
@@ -531,6 +538,7 @@
 				12F86B762AA41EDE003FD240 /* SettingUser.swift in Sources */,
 				12F86B152AA22E88003FD240 /* HomeView.swift in Sources */,
 				12F86B232AA25344003FD240 /* OnboardingControl.swift in Sources */,
+				12F86B842AA44561003FD240 /* SettingsViewModel.swift in Sources */,
 				12F86B1F2AA24E1B003FD240 /* OnBoardingViewModel.swift in Sources */,
 				12F86B372AA344E3003FD240 /* AuthSwitcher.swift in Sources */,
 				12F86B522AA38820003FD240 /* NotificationService.swift in Sources */,

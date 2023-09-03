@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct SettingsView: View {
+    @StateObject var viewModel: SettingsViewModel = .init()
+    
     var body: some View {
         ZStack {
             
@@ -17,32 +19,66 @@ struct SettingsView: View {
             VStack {
                 
                 LinearGradient(colors: [Color.accentColor.opacity(0.4), Color.clear], startPoint: .top, endPoint: .bottom)
-                    .edgesIgnoringSafeArea(.top)
                     .frame(height: 250)
+                    // .opacity(-viewModel.offset <= viewModel.appBarHeight ? 1 : 0)
+                    // .animation(.default, value: viewModel.offset)
+                    .edgesIgnoringSafeArea(.top)
+
+
                 
                 Spacer()
             }
             
             ScrollView(showsIndicators: false) {
                 
-                VStack(spacing: 0) {
+                ZStack {
                     
-                    SettingUser()
+                    VStack(spacing: 0) {
+                        
+                        SizeBox(height: viewModel.appBarHeight)
+                        
+                        SizeBox(height: 40)
+                                                
+                        SettingsOverview()
+                        
+                        SizeBox(height: 30)
+                        
+                        SettingsMenu()
+                        
+                    }
+                    .padding(.horizontal)
                     
-                    SizeBox(height: 40)
-                    
-                    SettingsOverview()
-                    
-                    SizeBox(height: 30)
-                    
-                    SettingsMenu()
-                    
+                    GeometryReader { proxy in
+                        let offset = proxy.frame(in: .named("scroll")).minY
+                        Color.clear
+                            .onChange(of: offset) { newValue in
+                                viewModel.offset = newValue
+                            }
+                    }
                 }
-                .padding(.horizontal)
                 
+            }
+            .coordinateSpace(name: "scroll")
+            .overlay(alignment: .top) {
+                SettingUser()
+                    .padding(.horizontal)
+                    .viewSize(height: $viewModel.appBarHeight)
+                    .padding(.bottom)
+                    .background {
+                        
+                        Color("Background")
+                            .ignoresSafeArea()
+                            .opacity(-viewModel.offset / viewModel.appBarHeight)
+                        
+                    }
             }
         }
     }
+}
+
+private struct OffsetPreferenceKey: PreferenceKey {
+  static var defaultValue: CGFloat = .zero
+  static func reduce(value: inout CGFloat, nextValue: () -> CGFloat) {}
 }
 
 struct SettingsView_Previews: PreviewProvider {
