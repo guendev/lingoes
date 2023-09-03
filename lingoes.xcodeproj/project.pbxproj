@@ -40,6 +40,14 @@
 		12F86B662AA3A094003FD240 /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86B652AA3A094003FD240 /* Keyboard.swift */; };
 		12F86B682AA3A721003FD240 /* AuthFocusableField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86B672AA3A721003FD240 /* AuthFocusableField.swift */; };
 		12F86B6A2AA3B276003FD240 /* OverlookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86B692AA3B276003FD240 /* OverlookView.swift */; };
+		12F86B6C2AA40F33003FD240 /* AppBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86B6B2AA40F33003FD240 /* AppBar.swift */; };
+		12F86B722AA417BA003FD240 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86B712AA417BA003FD240 /* SettingsView.swift */; };
+		12F86B742AA41CBA003FD240 /* IconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86B732AA41CBA003FD240 /* IconButton.swift */; };
+		12F86B762AA41EDE003FD240 /* SettingUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86B752AA41EDE003FD240 /* SettingUser.swift */; };
+		12F86B782AA41F57003FD240 /* SettingsOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86B772AA41F57003FD240 /* SettingsOverview.swift */; };
+		12F86B7A2AA4284D003FD240 /* SettingOverviewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86B792AA4284D003FD240 /* SettingOverviewItem.swift */; };
+		12F86B7D2AA42F35003FD240 /* WrappingHStack in Frameworks */ = {isa = PBXBuildFile; productRef = 12F86B7C2AA42F35003FD240 /* WrappingHStack */; };
+		12F86B802AA43185003FD240 /* ViewSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86B7F2AA43185003FD240 /* ViewSize.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +85,13 @@
 		12F86B652AA3A094003FD240 /* Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
 		12F86B672AA3A721003FD240 /* AuthFocusableField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthFocusableField.swift; sourceTree = "<group>"; };
 		12F86B692AA3B276003FD240 /* OverlookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlookView.swift; sourceTree = "<group>"; };
+		12F86B6B2AA40F33003FD240 /* AppBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBar.swift; sourceTree = "<group>"; };
+		12F86B712AA417BA003FD240 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		12F86B732AA41CBA003FD240 /* IconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconButton.swift; sourceTree = "<group>"; };
+		12F86B752AA41EDE003FD240 /* SettingUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingUser.swift; sourceTree = "<group>"; };
+		12F86B772AA41F57003FD240 /* SettingsOverview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsOverview.swift; sourceTree = "<group>"; };
+		12F86B792AA4284D003FD240 /* SettingOverviewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingOverviewItem.swift; sourceTree = "<group>"; };
+		12F86B7F2AA43185003FD240 /* ViewSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewSize.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +100,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				12F86B4E2AA376F0003FD240 /* FirebaseAnalytics in Frameworks */,
+				12F86B7D2AA42F35003FD240 /* WrappingHStack in Frameworks */,
 				12F86B502AA376F0003FD240 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -112,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				12F86B0A2AA22C28003FD240 /* Helpers */,
+				12F86B7E2AA4316C003FD240 /* Modifiers */,
 				12F86B092AA22C1A003FD240 /* Services */,
 				12F86B072AA22BDF003FD240 /* Screens */,
 				12F86B1B2AA23AFE003FD240 /* Styles */,
@@ -140,6 +157,7 @@
 		12F86B072AA22BDF003FD240 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				12F86B6D2AA41790003FD240 /* Settings */,
 				12F86B5A2AA38A76003FD240 /* Toast */,
 				12F86B242AA25B93003FD240 /* Auth */,
 				12F86B482AA34DE6003FD240 /* Overlook */,
@@ -228,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				12F86B172AA23834003FD240 /* SizeBox.swift */,
+				12F86B6B2AA40F33003FD240 /* AppBar.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -236,6 +255,7 @@
 			isa = PBXGroup;
 			children = (
 				12F86B1C2AA23B17003FD240 /* ButtonStyles.swift */,
+				12F86B732AA41CBA003FD240 /* IconButton.swift */,
 			);
 			path = Styles;
 			sourceTree = "<group>";
@@ -372,6 +392,49 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		12F86B6D2AA41790003FD240 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				12F86B702AA417A5003FD240 /* Models */,
+				12F86B6E2AA41795003FD240 /* Views */,
+				12F86B6F2AA4179C003FD240 /* ViewsModels */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		12F86B6E2AA41795003FD240 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				12F86B712AA417BA003FD240 /* SettingsView.swift */,
+				12F86B752AA41EDE003FD240 /* SettingUser.swift */,
+				12F86B772AA41F57003FD240 /* SettingsOverview.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		12F86B6F2AA4179C003FD240 /* ViewsModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewsModels;
+			sourceTree = "<group>";
+		};
+		12F86B702AA417A5003FD240 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				12F86B792AA4284D003FD240 /* SettingOverviewItem.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		12F86B7E2AA4316C003FD240 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				12F86B7F2AA43185003FD240 /* ViewSize.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -391,6 +454,7 @@
 			packageProductDependencies = (
 				12F86B4D2AA376F0003FD240 /* FirebaseAnalytics */,
 				12F86B4F2AA376F0003FD240 /* FirebaseAuth */,
+				12F86B7C2AA42F35003FD240 /* WrappingHStack */,
 			);
 			productName = lingoes;
 			productReference = 12F86AEF2AA226A8003FD240 /* lingoes.app */;
@@ -422,6 +486,7 @@
 			mainGroup = 12F86AE62AA226A8003FD240;
 			packageReferences = (
 				12F86B4C2AA376F0003FD240 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				12F86B7B2AA42F35003FD240 /* XCRemoteSwiftPackageReference "WrappingHStack" */,
 			);
 			productRefGroup = 12F86AF02AA226A8003FD240 /* Products */;
 			projectDirPath = "";
@@ -455,15 +520,20 @@
 				12F86AF82AA226A8003FD240 /* lingoes.xcdatamodeld in Sources */,
 				12F86B1D2AA23B17003FD240 /* ButtonStyles.swift in Sources */,
 				12F86B3E2AA34A1E003FD240 /* MainTab.swift in Sources */,
+				12F86B802AA43185003FD240 /* ViewSize.swift in Sources */,
+				12F86B742AA41CBA003FD240 /* IconButton.swift in Sources */,
 				12F86B422AA34AB5003FD240 /* MainTabView.swift in Sources */,
 				12F86B472AA34B62003FD240 /* MainTabItem.swift in Sources */,
 				12F86AFA2AA226A8003FD240 /* ContentView.swift in Sources */,
+				12F86B762AA41EDE003FD240 /* SettingUser.swift in Sources */,
 				12F86B152AA22E88003FD240 /* HomeView.swift in Sources */,
 				12F86B232AA25344003FD240 /* OnboardingControl.swift in Sources */,
 				12F86B1F2AA24E1B003FD240 /* OnBoardingViewModel.swift in Sources */,
 				12F86B372AA344E3003FD240 /* AuthSwitcher.swift in Sources */,
 				12F86B522AA38820003FD240 /* NotificationService.swift in Sources */,
+				12F86B6C2AA40F33003FD240 /* AppBar.swift in Sources */,
 				12F86B2C2AA2E58E003FD240 /* AuthViewModel.swift in Sources */,
+				12F86B722AA417BA003FD240 /* SettingsView.swift in Sources */,
 				12F86B642AA38EA6003FD240 /* ToastView.swift in Sources */,
 				12F86B272AA25BA5003FD240 /* AuthView.swift in Sources */,
 				12F86B3B2AA34990003FD240 /* MainView.swift in Sources */,
@@ -476,8 +546,10 @@
 				12F86B602AA38BF1003FD240 /* Toast.swift in Sources */,
 				12F86B682AA3A721003FD240 /* AuthFocusableField.swift in Sources */,
 				12F86B6A2AA3B276003FD240 /* OverlookView.swift in Sources */,
+				12F86B7A2AA4284D003FD240 /* SettingOverviewItem.swift in Sources */,
 				12F86B622AA38C2E003FD240 /* ToastViewModel.swift in Sources */,
 				12F86AF52AA226A8003FD240 /* Persistence.swift in Sources */,
+				12F86B782AA41F57003FD240 /* SettingsOverview.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -707,6 +779,14 @@
 				minimumVersion = 10.0.0;
 			};
 		};
+		12F86B7B2AA42F35003FD240 /* XCRemoteSwiftPackageReference "WrappingHStack" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dkk/WrappingHStack";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -719,6 +799,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 12F86B4C2AA376F0003FD240 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAuth;
+		};
+		12F86B7C2AA42F35003FD240 /* WrappingHStack */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 12F86B7B2AA42F35003FD240 /* XCRemoteSwiftPackageReference "WrappingHStack" */;
+			productName = WrappingHStack;
 		};
 /* End XCSwiftPackageProductDependency section */
 

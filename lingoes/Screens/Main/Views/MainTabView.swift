@@ -15,7 +15,7 @@ struct MainTabView: View {
         MainTabItem(tab: .overview, icon: "house", activeIcon: "house.fill"),
         MainTabItem(tab: .vocabularies, icon: "paperplane", activeIcon: "paperplane.fill"),
         MainTabItem(tab: .cources, icon: "command", activeIcon: "command"),
-        MainTabItem(tab: .setting, icon: "person", activeIcon: "person.fill")
+        MainTabItem(tab: .settings, icon: "person", activeIcon: "person.fill")
     ]
     
     var body: some View {
@@ -46,7 +46,7 @@ struct MainTabView: View {
         .overlay(alignment: .top) {
             Rectangle()
                 .frame(height: 1)
-                .foregroundColor(Color(red: 0.94, green: 0.94, blue: 0.98))
+                .foregroundColor(Color("Border"))
                 .padding(.top, -1)
         }
     }

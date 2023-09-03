@@ -16,39 +16,11 @@ struct AuthView: View {
         
         VStack(spacing: 0) {
             
-            HStack {
+            AppBar {
                 
-                Button {
-                    
-                    dismiss()
-                    
-                } label: {
-                    Image(systemName: "arrow.left")
-                        .frame(width: 42, height: 42)
-                        .overlay {
-                            RoundedRectangle(cornerRadius: 40)
-                                .stroke(Color("Border"), lineWidth: 1)
-                        }
-                }
-                .buttonStyle(.plain)
+                dismiss()
                 
-                Spacer()
-                
-                Button {
-                    
-                } label: {
-                    Image(systemName: "flag")
-                        .frame(width: 42, height: 42)
-                        .overlay {
-                            RoundedRectangle(cornerRadius: 40)
-                                .stroke(Color("Border"), lineWidth: 1)
-                        }
-                }
-                .buttonStyle(.plain)
-                
-            }
-            .padding(.horizontal)
-            .overlay {
+            } content : {
                 Text("Login")
                     .font(.title3)
                     .fontWeight(.semibold)
