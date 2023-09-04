@@ -12,10 +12,10 @@ struct MainTabView: View {
     @EnvironmentObject var viewModel: MainViewModel
     
     var tabs: [MainTabItem] = [
-        MainTabItem(tab: .overview, icon: "house", activeIcon: "house.fill"),
-        MainTabItem(tab: .vocabularies, icon: "paperplane", activeIcon: "paperplane.fill"),
-        MainTabItem(tab: .cources, icon: "command", activeIcon: "command"),
-        MainTabItem(tab: .settings, icon: "person", activeIcon: "person.fill")
+        MainTabItem(tab: .overview, icon: "Home", activeIcon: "HomeBold"),
+        MainTabItem(tab: .vocabularies, icon: "Chart", activeIcon: "ChartBold"),
+        MainTabItem(tab: .cources, icon: "Search", activeIcon: "SearchBold"),
+        MainTabItem(tab: .settings, icon: "Profile", activeIcon: "ProfileBold")
     ]
     
     var body: some View {
@@ -30,7 +30,7 @@ struct MainTabView: View {
                     
                 } label: {
                     
-                    Image(systemName: viewModel.currentTab == tab.tab ? tab.activeIcon : tab.icon)
+                    Image(viewModel.currentTab == tab.tab ? tab.activeIcon : tab.icon)
                         .renderingMode(.template)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
