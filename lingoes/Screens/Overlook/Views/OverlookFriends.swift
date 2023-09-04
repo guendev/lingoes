@@ -44,7 +44,7 @@ struct OverlookFriends: View {
                     Text("Learn now")
                     
                 }
-                .buttonStyle(PrimaryButtonStyle())
+                .buttonStyle(PrimaryButtonStyle(size: .lg))
 
                 
             }

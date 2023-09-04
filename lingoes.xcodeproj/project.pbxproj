@@ -12,6 +12,7 @@
 		121B85B82AA5EE900095FEA8 /* OverlookFriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121B85B72AA5EE900095FEA8 /* OverlookFriends.swift */; };
 		121B85BC2AA5F47F0095FEA8 /* OverlookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121B85BB2AA5F47F0095FEA8 /* OverlookViewModel.swift */; };
 		121B85BE2AA5F5CC0095FEA8 /* ScrollOffserListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121B85BD2AA5F5CC0095FEA8 /* ScrollOffserListener.swift */; };
+		121B85C02AA5FC1A0095FEA8 /* OverlookMeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121B85BF2AA5FC1A0095FEA8 /* OverlookMeta.swift */; };
 		12F86AF32AA226A8003FD240 /* lingoesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86AF22AA226A8003FD240 /* lingoesApp.swift */; };
 		12F86AF52AA226A8003FD240 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86AF42AA226A8003FD240 /* Persistence.swift */; };
 		12F86AF82AA226A8003FD240 /* lingoes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 12F86AF62AA226A8003FD240 /* lingoes.xcdatamodeld */; };
@@ -65,6 +66,7 @@
 		121B85B72AA5EE900095FEA8 /* OverlookFriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlookFriends.swift; sourceTree = "<group>"; };
 		121B85BB2AA5F47F0095FEA8 /* OverlookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlookViewModel.swift; sourceTree = "<group>"; };
 		121B85BD2AA5F5CC0095FEA8 /* ScrollOffserListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollOffserListener.swift; sourceTree = "<group>"; };
+		121B85BF2AA5FC1A0095FEA8 /* OverlookMeta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlookMeta.swift; sourceTree = "<group>"; };
 		12F86AEF2AA226A8003FD240 /* lingoes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lingoes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12F86AF22AA226A8003FD240 /* lingoesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lingoesApp.swift; sourceTree = "<group>"; };
 		12F86AF42AA226A8003FD240 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -386,6 +388,7 @@
 				121B85B22AA5ED080095FEA8 /* OverlookAvatar.swift */,
 				121B85B42AA5ED2D0095FEA8 /* OverDescription.swift */,
 				121B85B72AA5EE900095FEA8 /* OverlookFriends.swift */,
+				121B85BF2AA5FC1A0095FEA8 /* OverlookMeta.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -588,6 +591,7 @@
 				12F86AFA2AA226A8003FD240 /* ContentView.swift in Sources */,
 				121B85BC2AA5F47F0095FEA8 /* OverlookViewModel.swift in Sources */,
 				12F86B762AA41EDE003FD240 /* SettingUser.swift in Sources */,
+				121B85C02AA5FC1A0095FEA8 /* OverlookMeta.swift in Sources */,
 				12F86B152AA22E88003FD240 /* HomeView.swift in Sources */,
 				12F86B232AA25344003FD240 /* OnboardingControl.swift in Sources */,
 				12F86B8C2AA47CAC003FD240 /* AnalyticView.swift in Sources */,

@@ -56,13 +56,14 @@ struct OverlookView: View {
                                 .frame(maxWidth: .infinity)
                                 .sizeDetector(height: $viewModel.avatarHeight)
                             
+                            SizeBox(height: 20)
+                            
+                            OverlookMeta()
+                            
                             SizeBox(height: 40)
                             
                             OverDescription()
                                 .frame(maxWidth: .infinity, alignment: .leading)
-                            
-                            Color.clear
-                                .frame(height: 1000)
                             
                         }
                         .padding(.horizontal)
