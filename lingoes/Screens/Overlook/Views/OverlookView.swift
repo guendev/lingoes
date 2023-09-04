@@ -49,7 +49,7 @@ struct OverlookView: View {
                         }
                         
                         
-                        VStack(spacing: 0) {
+                        VStack(alignment: .leading, spacing: 0) {
                             
                             OverlookAvatar()
                                 .frame(width: viewModel.width * 0.75)
@@ -59,11 +59,15 @@ struct OverlookView: View {
                             SizeBox(height: 20)
                             
                             OverlookMeta()
+                                .frame(maxWidth: .infinity)
                             
                             SizeBox(height: 40)
                             
                             OverDescription()
-                                .frame(maxWidth: .infinity, alignment: .leading)
+                            
+                            SizeBox(height: 40)
+                            
+                            OverlookLevels()
                             
                         }
                         .padding(.horizontal)
