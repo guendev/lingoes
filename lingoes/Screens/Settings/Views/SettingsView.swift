@@ -20,8 +20,6 @@ struct SettingsView: View {
                 
                 LinearGradient(colors: [Color.accentColor.opacity(0.4), Color.clear], startPoint: .top, endPoint: .bottom)
                     .frame(height: 250)
-                    // .opacity(-viewModel.offset <= viewModel.appBarHeight ? 1 : 0)
-                    // .animation(.default, value: viewModel.offset)
                     .edgesIgnoringSafeArea(.top)
 
 

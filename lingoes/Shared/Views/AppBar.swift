@@ -42,18 +42,21 @@ struct AppBar<Content>: View where Content: View {
     var body: some View {
         HStack {
             
-            Button {
-        
-                
-            } label: {
-                Image(systemName: "xmark")
-                    .frame(width: 42, height: 42)
-                    .overlay {
-                        RoundedRectangle(cornerRadius: 40)
-                            .stroke(Color("Border"), lineWidth: 1)
-                    }
+            if onDissmiss != nil {
+                Button {
+            
+                    onDissmiss!()
+                    
+                } label: {
+                    Image(systemName: "xmark")
+                        .frame(width: 42, height: 42)
+                        .overlay {
+                            RoundedRectangle(cornerRadius: 40)
+                                .stroke(Color("Border"), lineWidth: 1)
+                        }
+                }
+                .buttonStyle(.plain)
             }
-            .buttonStyle(.plain)
             
             Spacer()
             

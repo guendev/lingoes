@@ -166,13 +166,13 @@
 			isa = PBXGroup;
 			children = (
 				12F86B892AA47C7F003FD240 /* Analytic */,
-				12F86B6D2AA41790003FD240 /* Settings */,
-				12F86B5A2AA38A76003FD240 /* Toast */,
 				12F86B242AA25B93003FD240 /* Auth */,
-				12F86B482AA34DE6003FD240 /* Overlook */,
 				12F86B122AA22E6E003FD240 /* Home */,
 				12F86B382AA3497A003FD240 /* Main */,
 				12F86B0C2AA22CE9003FD240 /* Onboarding */,
+				12F86B482AA34DE6003FD240 /* Overlook */,
+				12F86B6D2AA41790003FD240 /* Settings */,
+				12F86B5A2AA38A76003FD240 /* Toast */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
