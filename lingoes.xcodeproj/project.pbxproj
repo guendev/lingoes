@@ -51,6 +51,7 @@
 		12F86B822AA43CF7003FD240 /* SettingsMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86B812AA43CF7003FD240 /* SettingsMenu.swift */; };
 		12F86B842AA44561003FD240 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86B832AA44561003FD240 /* SettingsViewModel.swift */; };
 		12F86B882AA47541003FD240 /* SettingMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86B872AA47541003FD240 /* SettingMenuItem.swift */; };
+		12F86B8C2AA47CAC003FD240 /* AnalyticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86B8B2AA47CAC003FD240 /* AnalyticView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +99,7 @@
 		12F86B812AA43CF7003FD240 /* SettingsMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsMenu.swift; sourceTree = "<group>"; };
 		12F86B832AA44561003FD240 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		12F86B872AA47541003FD240 /* SettingMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingMenuItem.swift; sourceTree = "<group>"; };
+		12F86B8B2AA47CAC003FD240 /* AnalyticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +165,7 @@
 		12F86B072AA22BDF003FD240 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				12F86B892AA47C7F003FD240 /* Analytic */,
 				12F86B6D2AA41790003FD240 /* Settings */,
 				12F86B5A2AA38A76003FD240 /* Toast */,
 				12F86B242AA25B93003FD240 /* Auth */,
@@ -444,6 +447,22 @@
 			path = Modifiers;
 			sourceTree = "<group>";
 		};
+		12F86B892AA47C7F003FD240 /* Analytic */ = {
+			isa = PBXGroup;
+			children = (
+				12F86B8A2AA47C9A003FD240 /* Views */,
+			);
+			path = Analytic;
+			sourceTree = "<group>";
+		};
+		12F86B8A2AA47C9A003FD240 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				12F86B8B2AA47CAC003FD240 /* AnalyticView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -538,6 +557,7 @@
 				12F86B762AA41EDE003FD240 /* SettingUser.swift in Sources */,
 				12F86B152AA22E88003FD240 /* HomeView.swift in Sources */,
 				12F86B232AA25344003FD240 /* OnboardingControl.swift in Sources */,
+				12F86B8C2AA47CAC003FD240 /* AnalyticView.swift in Sources */,
 				12F86B842AA44561003FD240 /* SettingsViewModel.swift in Sources */,
 				12F86B1F2AA24E1B003FD240 /* OnBoardingViewModel.swift in Sources */,
 				12F86B372AA344E3003FD240 /* AuthSwitcher.swift in Sources */,

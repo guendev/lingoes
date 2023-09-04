@@ -8,5 +8,5 @@
 import SwiftUI
 
 class MainViewModel: ObservableObject {
-    @Published var currentTab: MainTab = .settings
+    @Published var currentTab: MainTab = .overview
 }

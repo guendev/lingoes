@@ -19,6 +19,9 @@ struct MainView: View {
             
             TabView(selection: $viewModel.currentTab) {
                 
+                AnalyticView()
+                    .tag(MainTab.overview)
+                
                 SettingsView()
                     .tag(MainTab.settings)
                 
