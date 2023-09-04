@@ -60,7 +60,7 @@ struct SettingsView: View {
             .overlay(alignment: .top) {
                 SettingUser()
                     .padding(.horizontal)
-                    .viewSize(height: $viewModel.appBarHeight)
+                    .sizeDetector(height: $viewModel.appBarHeight)
                     .padding(.bottom)
                     .background {
                         

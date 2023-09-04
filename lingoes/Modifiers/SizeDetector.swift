@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ViewSizeModifier: ViewModifier {
+struct SizeDetectorModifier: ViewModifier {
     @Binding var width: CGFloat
     @Binding var height: CGFloat
     
@@ -31,7 +31,7 @@ struct ViewSizeModifier: ViewModifier {
 }
 
 extension View {
-    func viewSize(width: Binding<CGFloat> = .constant(0), height: Binding<CGFloat> = .constant(0)) -> some View {
-        self.modifier(ViewSizeModifier(width: width, height: height))
+    func sizeDetector(width: Binding<CGFloat> = .constant(0), height: Binding<CGFloat> = .constant(0)) -> some View {
+        self.modifier(SizeDetectorModifier(width: width, height: height))
     }
 }

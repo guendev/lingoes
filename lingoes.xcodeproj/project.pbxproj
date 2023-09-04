@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		121B85B32AA5ED080095FEA8 /* OverlookAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121B85B22AA5ED080095FEA8 /* OverlookAvatar.swift */; };
+		121B85B52AA5ED2D0095FEA8 /* OverDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121B85B42AA5ED2D0095FEA8 /* OverDescription.swift */; };
+		121B85B82AA5EE900095FEA8 /* OverlookFriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121B85B72AA5EE900095FEA8 /* OverlookFriends.swift */; };
+		121B85BC2AA5F47F0095FEA8 /* OverlookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121B85BB2AA5F47F0095FEA8 /* OverlookViewModel.swift */; };
+		121B85BE2AA5F5CC0095FEA8 /* ScrollOffserListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121B85BD2AA5F5CC0095FEA8 /* ScrollOffserListener.swift */; };
 		12F86AF32AA226A8003FD240 /* lingoesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86AF22AA226A8003FD240 /* lingoesApp.swift */; };
 		12F86AF52AA226A8003FD240 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86AF42AA226A8003FD240 /* Persistence.swift */; };
 		12F86AF82AA226A8003FD240 /* lingoes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 12F86AF62AA226A8003FD240 /* lingoes.xcdatamodeld */; };
@@ -47,7 +52,7 @@
 		12F86B782AA41F57003FD240 /* SettingsOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86B772AA41F57003FD240 /* SettingsOverview.swift */; };
 		12F86B7A2AA4284D003FD240 /* SettingOverviewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86B792AA4284D003FD240 /* SettingOverviewItem.swift */; };
 		12F86B7D2AA42F35003FD240 /* WrappingHStack in Frameworks */ = {isa = PBXBuildFile; productRef = 12F86B7C2AA42F35003FD240 /* WrappingHStack */; };
-		12F86B802AA43185003FD240 /* ViewSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86B7F2AA43185003FD240 /* ViewSize.swift */; };
+		12F86B802AA43185003FD240 /* SizeDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86B7F2AA43185003FD240 /* SizeDetector.swift */; };
 		12F86B822AA43CF7003FD240 /* SettingsMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86B812AA43CF7003FD240 /* SettingsMenu.swift */; };
 		12F86B842AA44561003FD240 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86B832AA44561003FD240 /* SettingsViewModel.swift */; };
 		12F86B882AA47541003FD240 /* SettingMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86B872AA47541003FD240 /* SettingMenuItem.swift */; };
@@ -55,6 +60,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		121B85B22AA5ED080095FEA8 /* OverlookAvatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlookAvatar.swift; sourceTree = "<group>"; };
+		121B85B42AA5ED2D0095FEA8 /* OverDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverDescription.swift; sourceTree = "<group>"; };
+		121B85B72AA5EE900095FEA8 /* OverlookFriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlookFriends.swift; sourceTree = "<group>"; };
+		121B85BB2AA5F47F0095FEA8 /* OverlookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlookViewModel.swift; sourceTree = "<group>"; };
+		121B85BD2AA5F5CC0095FEA8 /* ScrollOffserListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollOffserListener.swift; sourceTree = "<group>"; };
 		12F86AEF2AA226A8003FD240 /* lingoes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lingoes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12F86AF22AA226A8003FD240 /* lingoesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lingoesApp.swift; sourceTree = "<group>"; };
 		12F86AF42AA226A8003FD240 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -95,7 +105,7 @@
 		12F86B752AA41EDE003FD240 /* SettingUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingUser.swift; sourceTree = "<group>"; };
 		12F86B772AA41F57003FD240 /* SettingsOverview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsOverview.swift; sourceTree = "<group>"; };
 		12F86B792AA4284D003FD240 /* SettingOverviewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingOverviewItem.swift; sourceTree = "<group>"; };
-		12F86B7F2AA43185003FD240 /* ViewSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewSize.swift; sourceTree = "<group>"; };
+		12F86B7F2AA43185003FD240 /* SizeDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeDetector.swift; sourceTree = "<group>"; };
 		12F86B812AA43CF7003FD240 /* SettingsMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsMenu.swift; sourceTree = "<group>"; };
 		12F86B832AA44561003FD240 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		12F86B872AA47541003FD240 /* SettingMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingMenuItem.swift; sourceTree = "<group>"; };
@@ -116,6 +126,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		121B85B92AA5F4630095FEA8 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				121B85BB2AA5F47F0095FEA8 /* OverlookViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		121B85BA2AA5F46A0095FEA8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		12F86AE62AA226A8003FD240 = {
 			isa = PBXGroup;
 			children = (
@@ -256,6 +281,7 @@
 			children = (
 				12F86B172AA23834003FD240 /* SizeBox.swift */,
 				12F86B6B2AA40F33003FD240 /* AppBar.swift */,
+				121B85BD2AA5F5CC0095FEA8 /* ScrollOffserListener.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -346,6 +372,8 @@
 		12F86B482AA34DE6003FD240 /* Overlook */ = {
 			isa = PBXGroup;
 			children = (
+				121B85BA2AA5F46A0095FEA8 /* Models */,
+				121B85B92AA5F4630095FEA8 /* ViewModels */,
 				12F86B492AA34DFC003FD240 /* Views */,
 			);
 			path = Overlook;
@@ -355,6 +383,9 @@
 			isa = PBXGroup;
 			children = (
 				12F86B692AA3B276003FD240 /* OverlookView.swift */,
+				121B85B22AA5ED080095FEA8 /* OverlookAvatar.swift */,
+				121B85B42AA5ED2D0095FEA8 /* OverDescription.swift */,
+				121B85B72AA5EE900095FEA8 /* OverlookFriends.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -442,7 +473,7 @@
 		12F86B7E2AA4316C003FD240 /* Modifiers */ = {
 			isa = PBXGroup;
 			children = (
-				12F86B7F2AA43185003FD240 /* ViewSize.swift */,
+				12F86B7F2AA43185003FD240 /* SizeDetector.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
@@ -549,11 +580,13 @@
 				12F86AF82AA226A8003FD240 /* lingoes.xcdatamodeld in Sources */,
 				12F86B1D2AA23B17003FD240 /* ButtonStyles.swift in Sources */,
 				12F86B3E2AA34A1E003FD240 /* MainTab.swift in Sources */,
-				12F86B802AA43185003FD240 /* ViewSize.swift in Sources */,
+				12F86B802AA43185003FD240 /* SizeDetector.swift in Sources */,
 				12F86B742AA41CBA003FD240 /* IconButton.swift in Sources */,
 				12F86B422AA34AB5003FD240 /* MainTabView.swift in Sources */,
+				121B85B82AA5EE900095FEA8 /* OverlookFriends.swift in Sources */,
 				12F86B472AA34B62003FD240 /* MainTabItem.swift in Sources */,
 				12F86AFA2AA226A8003FD240 /* ContentView.swift in Sources */,
+				121B85BC2AA5F47F0095FEA8 /* OverlookViewModel.swift in Sources */,
 				12F86B762AA41EDE003FD240 /* SettingUser.swift in Sources */,
 				12F86B152AA22E88003FD240 /* HomeView.swift in Sources */,
 				12F86B232AA25344003FD240 /* OnboardingControl.swift in Sources */,
@@ -565,8 +598,11 @@
 				12F86B6C2AA40F33003FD240 /* AppBar.swift in Sources */,
 				12F86B2C2AA2E58E003FD240 /* AuthViewModel.swift in Sources */,
 				12F86B722AA417BA003FD240 /* SettingsView.swift in Sources */,
+				121B85B52AA5ED2D0095FEA8 /* OverDescription.swift in Sources */,
 				12F86B642AA38EA6003FD240 /* ToastView.swift in Sources */,
+				121B85B32AA5ED080095FEA8 /* OverlookAvatar.swift in Sources */,
 				12F86B272AA25BA5003FD240 /* AuthView.swift in Sources */,
+				121B85BE2AA5F5CC0095FEA8 /* ScrollOffserListener.swift in Sources */,
 				12F86B3B2AA34990003FD240 /* MainView.swift in Sources */,
 				12F86B0E2AA22D0A003FD240 /* OnboardingView.swift in Sources */,
 				12F86B662AA3A094003FD240 /* Keyboard.swift in Sources */,
