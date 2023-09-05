@@ -18,6 +18,7 @@
 		121B85C72AA602580095FEA8 /* OverlookLevelItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121B85C62AA602580095FEA8 /* OverlookLevelItem.swift */; };
 		121B85CE2AA60B4D0095FEA8 /* DottedLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121B85CD2AA60B4D0095FEA8 /* DottedLine.swift */; };
 		121B85D02AA62FA20095FEA8 /* OverlookWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121B85CF2AA62FA20095FEA8 /* OverlookWord.swift */; };
+		121B85D72AA6C2770095FEA8 /* SwipeActions in Frameworks */ = {isa = PBXBuildFile; productRef = 121B85D62AA6C2770095FEA8 /* SwipeActions */; };
 		12F86AF32AA226A8003FD240 /* lingoesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86AF22AA226A8003FD240 /* lingoesApp.swift */; };
 		12F86AF52AA226A8003FD240 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86AF42AA226A8003FD240 /* Persistence.swift */; };
 		12F86AF82AA226A8003FD240 /* lingoes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 12F86AF62AA226A8003FD240 /* lingoes.xcdatamodeld */; };
@@ -130,6 +131,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				12F86B4E2AA376F0003FD240 /* FirebaseAnalytics in Frameworks */,
+				121B85D72AA6C2770095FEA8 /* SwipeActions in Frameworks */,
 				12F86B7D2AA42F35003FD240 /* WrappingHStack in Frameworks */,
 				12F86B502AA376F0003FD240 /* FirebaseAuth in Frameworks */,
 			);
@@ -556,6 +558,7 @@
 				12F86B4D2AA376F0003FD240 /* FirebaseAnalytics */,
 				12F86B4F2AA376F0003FD240 /* FirebaseAuth */,
 				12F86B7C2AA42F35003FD240 /* WrappingHStack */,
+				121B85D62AA6C2770095FEA8 /* SwipeActions */,
 			);
 			productName = lingoes;
 			productReference = 12F86AEF2AA226A8003FD240 /* lingoes.app */;
@@ -588,6 +591,7 @@
 			packageReferences = (
 				12F86B4C2AA376F0003FD240 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				12F86B7B2AA42F35003FD240 /* XCRemoteSwiftPackageReference "WrappingHStack" */,
+				121B85D52AA6C2770095FEA8 /* XCRemoteSwiftPackageReference "SwipeActions" */,
 			);
 			productRefGroup = 12F86AF02AA226A8003FD240 /* Products */;
 			projectDirPath = "";
@@ -887,6 +891,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		121B85D52AA6C2770095FEA8 /* XCRemoteSwiftPackageReference "SwipeActions" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/aheze/SwipeActions";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		12F86B4C2AA376F0003FD240 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -906,6 +918,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		121B85D62AA6C2770095FEA8 /* SwipeActions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 121B85D52AA6C2770095FEA8 /* XCRemoteSwiftPackageReference "SwipeActions" */;
+			productName = SwipeActions;
+		};
 		12F86B4D2AA376F0003FD240 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 12F86B4C2AA376F0003FD240 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

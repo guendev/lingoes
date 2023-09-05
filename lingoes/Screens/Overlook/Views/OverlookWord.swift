@@ -6,33 +6,39 @@
 //
 
 import SwiftUI
+import SwipeActions
 
 struct OverlookWord: View {
     var word: String
     
     @Environment(\.colorScheme) var colorScheme
     
+    @State var actionWidth: CGFloat = .zero
+    
     var body: some View {
-        ZStack {
-            HStack {
-                Text(word)
-                    .font(.callout)
-                    .foregroundColor(Color("Text"))
-                    .padding(.trailing)
-            }
-            .padding(.horizontal)
-            .padding(.vertical)
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .background(colorScheme == .light ? .white : Color("Background2"))
-            
-            HStack {
+        SwipeView {
+            Text(word + " \(actionWidth)")
+                .font(.callout)
+                .foregroundColor(Color("Text"))
+                .padding(.horizontal)
+                .padding(.vertical)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .background(colorScheme == .light ? .white : Color("Background2"))
+                .cornerRadius(15)
+                .shadow(color: Color(red: 0.02, green: 0.01, blue: 0.29).opacity(0.03), radius: 27, x: 10, y: 24)
+                .contentShape(Rectangle())
+        } trailingActions: { _ in
+            SwipeAction {
                 
-                Spacer()
+            } label: { context in
                 
                 HStack(spacing: 30) {
                     Button {
                         
                     } label: {
+                        
+                        
                         Image(systemName: "eye")
                             .font(.body)
                             .foregroundColor(Color("Text"))
@@ -59,15 +65,19 @@ struct OverlookWord: View {
                     .buttonStyle(.plain)
                     
                 }
-                .padding(.horizontal)
+                .padding(.horizontal, 30)
+                .sizeDetector(width: $actionWidth)
                 
+            } background: { active in
+                RoundedRectangle(cornerRadius: 15)
+                    .fill(colorScheme == .light ? .white : Color("Background2"))
+                    .shadow(color: Color(red: 0.02, green: 0.01, blue: 0.29).opacity(0.03), radius: 27, x: 10, y: 24)
             }
             
         }
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .background(colorScheme == .light ? .white : Color("Background2"))
-        .cornerRadius(15)
-        .shadow(color: Color(red: 0.02, green: 0.01, blue: 0.29).opacity(0.03), radius: 27, x: 10, y: 24)
+        .swipeActionCornerRadius(0)
+        .swipeActionsMaskCornerRadius(0)
+        .swipeActionWidth(actionWidth)
     }
 }
 

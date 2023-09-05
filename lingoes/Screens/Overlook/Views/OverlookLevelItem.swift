@@ -15,7 +15,6 @@ struct OverlookLevelItem: View {
     @EnvironmentObject var viewModel: OverlookViewModel
     
     @State var words: [String] = ["Apple", "Orange", "Mango", "Cherry"]
-    @State var wordsHeight: CGFloat = .zero
     
 
     var body: some View {
@@ -56,18 +55,8 @@ struct OverlookLevelItem: View {
                     }
                     
                 }
-                .padding(.leading, 50)
+                .padding(.leading)
                 .frame(maxWidth: .infinity, alignment: .leading)
-                .overlay(alignment: .leading) {
-                    
-                    DottedLine()
-                        .stroke(style: StrokeStyle(lineWidth: 2, dash: [10]))
-                        .frame(width: 1, height: getLineHeight())
-                        .foregroundColor(Color("Border"))
-                        .offset(x: 25 - 1/2)
-                    
-                }
-                .sizeDetector(height: $wordsHeight)
             }
         }
     }
@@ -81,17 +70,6 @@ struct OverlookLevelItem: View {
     
     func isSelected() -> Bool {
         viewModel.selectedLevels.contains(level.id)
-    }
-    
-    func getLineHeight() -> CGFloat {
-        guard wordsHeight > 0 else {
-            return 0
-        }
-        
-        let spacingHeight = CGFloat(words.count - 1) * spacing
-        let sizeEachItem = (wordsHeight - spacingHeight) / CGFloat(words.count)
-        
-        return wordsHeight - sizeEachItem
     }
 }
 
