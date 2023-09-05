@@ -22,6 +22,7 @@
 		128C2F2E2AA6F6DE003A4845 /* DiscoveryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128C2F2D2AA6F6DE003A4845 /* DiscoveryView.swift */; };
 		128C2F302AA71628003A4845 /* DiscoveryAppBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128C2F2F2AA71628003A4845 /* DiscoveryAppBar.swift */; };
 		128C2F332AA716A0003A4845 /* DiscoverySearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128C2F322AA716A0003A4845 /* DiscoverySearch.swift */; };
+		128C2F352AA7174D003A4845 /* DiscoveryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128C2F342AA7174D003A4845 /* DiscoveryViewModel.swift */; };
 		12E926762AA6E33700E18179 /* NativePartialSheet in Frameworks */ = {isa = PBXBuildFile; productRef = 12E926752AA6E33700E18179 /* NativePartialSheet */; };
 		12F86AF32AA226A8003FD240 /* lingoesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86AF22AA226A8003FD240 /* lingoesApp.swift */; };
 		12F86AF52AA226A8003FD240 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86AF42AA226A8003FD240 /* Persistence.swift */; };
@@ -85,6 +86,7 @@
 		128C2F2D2AA6F6DE003A4845 /* DiscoveryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryView.swift; sourceTree = "<group>"; };
 		128C2F2F2AA71628003A4845 /* DiscoveryAppBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryAppBar.swift; sourceTree = "<group>"; };
 		128C2F322AA716A0003A4845 /* DiscoverySearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverySearch.swift; sourceTree = "<group>"; };
+		128C2F342AA7174D003A4845 /* DiscoveryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryViewModel.swift; sourceTree = "<group>"; };
 		12F86AEF2AA226A8003FD240 /* lingoes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lingoes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12F86AF22AA226A8003FD240 /* lingoesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lingoesApp.swift; sourceTree = "<group>"; };
 		12F86AF42AA226A8003FD240 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 		128C2F2B2AA6F6CA003A4845 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				128C2F342AA7174D003A4845 /* DiscoveryViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -694,6 +697,7 @@
 				12F86B272AA25BA5003FD240 /* AuthView.swift in Sources */,
 				121B85BE2AA5F5CC0095FEA8 /* ScrollOffserListener.swift in Sources */,
 				12F86B3B2AA34990003FD240 /* MainView.swift in Sources */,
+				128C2F352AA7174D003A4845 /* DiscoveryViewModel.swift in Sources */,
 				12F86B0E2AA22D0A003FD240 /* OnboardingView.swift in Sources */,
 				12F86B662AA3A094003FD240 /* Keyboard.swift in Sources */,
 				12F86B452AA34AE4003FD240 /* MainViewModel.swift in Sources */,

@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct DiscoveryView: View {
+    
+    @StateObject var viewModel: DiscoveryViewModel = .init()
+    
     var body: some View {
         ZStack {
             
@@ -25,12 +28,14 @@ struct DiscoveryView: View {
                     VStack {
                         DiscoverySearch()
                     }
+                    .padding(.horizontal)
                     
                 }
                 
             }
             
         }
+        .environmentObject(viewModel)
     }
 }
 
