@@ -14,7 +14,7 @@ struct MainTabView: View {
     var tabs: [MainTabItem] = [
         MainTabItem(tab: .overview, icon: "Home", activeIcon: "HomeBold"),
         MainTabItem(tab: .vocabularies, icon: "Chart", activeIcon: "ChartBold"),
-        MainTabItem(tab: .cources, icon: "Search", activeIcon: "SearchBold"),
+        MainTabItem(tab: .discovery, icon: "Search", activeIcon: "SearchBold"),
         MainTabItem(tab: .settings, icon: "Profile", activeIcon: "ProfileBold")
     ]
     

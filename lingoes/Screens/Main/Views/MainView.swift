@@ -22,6 +22,9 @@ struct MainView: View {
                 AnalyticView()
                     .tag(MainTab.overview)
                 
+                DiscoveryView()
+                    .tag(MainTab.discovery)
+                
                 SettingsView()
                     .tag(MainTab.settings)
                 

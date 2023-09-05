@@ -6,5 +6,5 @@
 //
 
 enum MainTab {
-    case overview, vocabularies, cources, settings
+    case overview, vocabularies, discovery, settings
 }

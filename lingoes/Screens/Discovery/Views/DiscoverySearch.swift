@@ -1,19 +1,19 @@
 //
-//  HomeView.swift
+//  DiscoverySearch.swift
 //  lingoes
 //
-//  Created by Guen on 01/09/2023.
+//  Created by Guen on 05/09/2023.
 //
 
 import SwiftUI
 
-struct HomeView: View {
+struct DiscoverySearch: View {
     var body: some View {
-        Text("Home View")
+        Text("Hello, World!")
     }
 }
 
-struct HomeView_Previews: PreviewProvider {
+struct DiscoverySearch_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             MainView()
