@@ -8,16 +8,13 @@
 import SwiftUI
 
 struct OverlookLevels: View {
-    var levels: [Level] = [
-        Level(title: "Introducing", subtitle: "About user interface"),
-        Level(title: "Theory", subtitle: "How to learn ui/ux design"),
-        Level(title: "Clossing", subtitle: "Question and answer session")
-    ]
+    
+    @EnvironmentObject var viewModel: OverlookViewModel
     
     var body: some View {
         VStack(spacing: 17) {
             
-            ForEach(levels) { level in
+            ForEach(viewModel.levels) { level in
                 OverlookLevelItem(level: level)
             }
             

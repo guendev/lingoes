@@ -16,6 +16,8 @@
 		121B85C22AA5FE840095FEA8 /* OverlookLevels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121B85C12AA5FE840095FEA8 /* OverlookLevels.swift */; };
 		121B85C52AA5FF9F0095FEA8 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121B85C42AA5FF9F0095FEA8 /* Level.swift */; };
 		121B85C72AA602580095FEA8 /* OverlookLevelItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121B85C62AA602580095FEA8 /* OverlookLevelItem.swift */; };
+		121B85CE2AA60B4D0095FEA8 /* DottedLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121B85CD2AA60B4D0095FEA8 /* DottedLine.swift */; };
+		121B85D02AA62FA20095FEA8 /* OverlookWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121B85CF2AA62FA20095FEA8 /* OverlookWord.swift */; };
 		12F86AF32AA226A8003FD240 /* lingoesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86AF22AA226A8003FD240 /* lingoesApp.swift */; };
 		12F86AF52AA226A8003FD240 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86AF42AA226A8003FD240 /* Persistence.swift */; };
 		12F86AF82AA226A8003FD240 /* lingoes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 12F86AF62AA226A8003FD240 /* lingoes.xcdatamodeld */; };
@@ -73,6 +75,8 @@
 		121B85C12AA5FE840095FEA8 /* OverlookLevels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlookLevels.swift; sourceTree = "<group>"; };
 		121B85C42AA5FF9F0095FEA8 /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		121B85C62AA602580095FEA8 /* OverlookLevelItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlookLevelItem.swift; sourceTree = "<group>"; };
+		121B85CD2AA60B4D0095FEA8 /* DottedLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DottedLine.swift; sourceTree = "<group>"; };
+		121B85CF2AA62FA20095FEA8 /* OverlookWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlookWord.swift; sourceTree = "<group>"; };
 		12F86AEF2AA226A8003FD240 /* lingoes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lingoes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12F86AF22AA226A8003FD240 /* lingoesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lingoesApp.swift; sourceTree = "<group>"; };
 		12F86AF42AA226A8003FD240 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -157,6 +161,21 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		121B85CC2AA60B3F0095FEA8 /* Shapes */ = {
+			isa = PBXGroup;
+			children = (
+				121B85CD2AA60B4D0095FEA8 /* DottedLine.swift */,
+			);
+			path = Shapes;
+			sourceTree = "<group>";
+		};
+		121B85D22AA631420095FEA8 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
 		12F86AE62AA226A8003FD240 = {
 			isa = PBXGroup;
 			children = (
@@ -178,10 +197,8 @@
 			children = (
 				12F86B0A2AA22C28003FD240 /* Helpers */,
 				121B85C32AA5FF810095FEA8 /* Models */,
-				12F86B7E2AA4316C003FD240 /* Modifiers */,
 				12F86B092AA22C1A003FD240 /* Services */,
 				12F86B072AA22BDF003FD240 /* Screens */,
-				12F86B1B2AA23AFE003FD240 /* Styles */,
 				12F86B0B2AA22C59003FD240 /* Shared */,
 				12F86AFE2AA226A9003FD240 /* Preview Content */,
 				12F86AFB2AA226A9003FD240 /* Assets.xcassets */,
@@ -238,6 +255,10 @@
 		12F86B0B2AA22C59003FD240 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				121B85D22AA631420095FEA8 /* Extentions */,
+				121B85CC2AA60B3F0095FEA8 /* Shapes */,
+				12F86B7E2AA4316C003FD240 /* Modifiers */,
+				12F86B1B2AA23AFE003FD240 /* Styles */,
 				12F86B162AA23803003FD240 /* Views */,
 			);
 			path = Shared;
@@ -406,6 +427,7 @@
 				121B85BF2AA5FC1A0095FEA8 /* OverlookMeta.swift */,
 				121B85C12AA5FE840095FEA8 /* OverlookLevels.swift */,
 				121B85C62AA602580095FEA8 /* OverlookLevelItem.swift */,
+				121B85CF2AA62FA20095FEA8 /* OverlookWord.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -620,6 +642,7 @@
 				12F86B6C2AA40F33003FD240 /* AppBar.swift in Sources */,
 				121B85C22AA5FE840095FEA8 /* OverlookLevels.swift in Sources */,
 				12F86B2C2AA2E58E003FD240 /* AuthViewModel.swift in Sources */,
+				121B85D02AA62FA20095FEA8 /* OverlookWord.swift in Sources */,
 				12F86B722AA417BA003FD240 /* SettingsView.swift in Sources */,
 				121B85B52AA5ED2D0095FEA8 /* OverDescription.swift in Sources */,
 				12F86B642AA38EA6003FD240 /* ToastView.swift in Sources */,
@@ -640,6 +663,7 @@
 				12F86B7A2AA4284D003FD240 /* SettingOverviewItem.swift in Sources */,
 				12F86B622AA38C2E003FD240 /* ToastViewModel.swift in Sources */,
 				12F86AF52AA226A8003FD240 /* Persistence.swift in Sources */,
+				121B85CE2AA60B4D0095FEA8 /* DottedLine.swift in Sources */,
 				12F86B782AA41F57003FD240 /* SettingsOverview.swift in Sources */,
 				121B85C52AA5FF9F0095FEA8 /* Level.swift in Sources */,
 			);

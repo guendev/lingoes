@@ -81,7 +81,11 @@ struct OverlookView: View {
                 
             }
         }
+        .task {
+            await viewModel.getLevels()
+        }
         .sizeDetector(width: $viewModel.width)
+        .environmentObject(viewModel)
     }
 }
 
