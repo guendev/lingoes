@@ -23,6 +23,7 @@
 		128C2F302AA71628003A4845 /* DiscoveryAppBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128C2F2F2AA71628003A4845 /* DiscoveryAppBar.swift */; };
 		128C2F332AA716A0003A4845 /* DiscoverySearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128C2F322AA716A0003A4845 /* DiscoverySearch.swift */; };
 		128C2F352AA7174D003A4845 /* DiscoveryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128C2F342AA7174D003A4845 /* DiscoveryViewModel.swift */; };
+		12BED22D2AA7315D003AAA88 /* DiscoveryRecommendation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12BED22C2AA7315D003AAA88 /* DiscoveryRecommendation.swift */; };
 		12E926762AA6E33700E18179 /* NativePartialSheet in Frameworks */ = {isa = PBXBuildFile; productRef = 12E926752AA6E33700E18179 /* NativePartialSheet */; };
 		12F86AF32AA226A8003FD240 /* lingoesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86AF22AA226A8003FD240 /* lingoesApp.swift */; };
 		12F86AF52AA226A8003FD240 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86AF42AA226A8003FD240 /* Persistence.swift */; };
@@ -87,6 +88,7 @@
 		128C2F2F2AA71628003A4845 /* DiscoveryAppBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryAppBar.swift; sourceTree = "<group>"; };
 		128C2F322AA716A0003A4845 /* DiscoverySearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverySearch.swift; sourceTree = "<group>"; };
 		128C2F342AA7174D003A4845 /* DiscoveryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryViewModel.swift; sourceTree = "<group>"; };
+		12BED22C2AA7315D003AAA88 /* DiscoveryRecommendation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryRecommendation.swift; sourceTree = "<group>"; };
 		12F86AEF2AA226A8003FD240 /* lingoes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lingoes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12F86AF22AA226A8003FD240 /* lingoesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lingoesApp.swift; sourceTree = "<group>"; };
 		12F86AF42AA226A8003FD240 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 				128C2F2D2AA6F6DE003A4845 /* DiscoveryView.swift */,
 				128C2F2F2AA71628003A4845 /* DiscoveryAppBar.swift */,
 				128C2F322AA716A0003A4845 /* DiscoverySearch.swift */,
+				12BED22C2AA7315D003AAA88 /* DiscoveryRecommendation.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -691,6 +694,7 @@
 				12F86B2C2AA2E58E003FD240 /* AuthViewModel.swift in Sources */,
 				121B85D02AA62FA20095FEA8 /* OverlookWord.swift in Sources */,
 				12F86B722AA417BA003FD240 /* SettingsView.swift in Sources */,
+				12BED22D2AA7315D003AAA88 /* DiscoveryRecommendation.swift in Sources */,
 				121B85B52AA5ED2D0095FEA8 /* OverDescription.swift in Sources */,
 				12F86B642AA38EA6003FD240 /* ToastView.swift in Sources */,
 				121B85B32AA5ED080095FEA8 /* OverlookAvatar.swift in Sources */,

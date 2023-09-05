@@ -25,8 +25,10 @@ struct DiscoveryView: View {
                 
                 ScrollView(showsIndicators: false) {
                     
-                    VStack {
+                    VStack(spacing: 24) {
                         DiscoverySearch()
+                        
+                        DiscoveryRecommendation()
                     }
                     .padding(.horizontal)
                     
