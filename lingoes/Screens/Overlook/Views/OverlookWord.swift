@@ -105,6 +105,7 @@ struct OverlookWord: View {
         .swipeActionCornerRadius(0)
         .swipeActionsMaskCornerRadius(0)
         .swipeActionWidth(actionWidth)
+        .swipeMinimumDistance(10)
     }
 }
 
