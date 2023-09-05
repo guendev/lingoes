@@ -91,6 +91,15 @@
       }
     },
     {
+      "identity" : "nativepartialsheet",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/CoolONEOfficial/NativePartialSheet",
+      "state" : {
+        "revision" : "137ca06141a5b53864c16c7c1bc6d430e934d1af",
+        "version" : "2.0.5"
+      }
+    },
+    {
       "identity" : "promises",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/google/promises.git",

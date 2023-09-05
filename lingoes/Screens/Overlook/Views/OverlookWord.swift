@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwipeActions
+import NativePartialSheet
 
 struct OverlookWord: View {
     var word: String
@@ -15,19 +16,45 @@ struct OverlookWord: View {
     
     @State var actionWidth: CGFloat = .zero
     
+    @State var showExplainSheet = false
+    
     var body: some View {
         SwipeView {
-            Text(word + " \(actionWidth)")
-                .font(.callout)
-                .foregroundColor(Color("Text"))
-                .padding(.horizontal)
-                .padding(.vertical)
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .background(colorScheme == .light ? .white : Color("Background2"))
-                .cornerRadius(15)
-                .shadow(color: Color(red: 0.02, green: 0.01, blue: 0.29).opacity(0.03), radius: 27, x: 10, y: 24)
-                .contentShape(Rectangle())
+            
+            Button {
+                
+                withAnimation {
+                    showExplainSheet.toggle()
+                }
+                
+            } label: {
+                
+                Text(word)
+                    .font(.callout)
+                    .foregroundColor(Color("Text"))
+                    .padding(.horizontal)
+                    .padding(.vertical)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .background(colorScheme == .light ? .white : Color("Background2"))
+                    .cornerRadius(15)
+                    .shadow(color: Color(red: 0.02, green: 0.01, blue: 0.29).opacity(0.03), radius: 27, x: 10, y: 24)
+            }
+            .contentShape(Rectangle())
+            .sheet(isPresented: $showExplainSheet) {
+                ZStack {
+                                    
+                    Color("Background")
+                        .edgesIgnoringSafeArea(.all)
+                    
+                }
+                .environment(\.colorScheme, colorScheme)
+            }
+            .presentationDetents([ .medium ])
+            .cornerRadius(32)
+            .presentationDragIndicator(.visible)
+            
+            
         } trailingActions: { _ in
             SwipeAction {
                 

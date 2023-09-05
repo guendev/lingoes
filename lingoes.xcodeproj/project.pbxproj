@@ -19,6 +19,7 @@
 		121B85CE2AA60B4D0095FEA8 /* DottedLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121B85CD2AA60B4D0095FEA8 /* DottedLine.swift */; };
 		121B85D02AA62FA20095FEA8 /* OverlookWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121B85CF2AA62FA20095FEA8 /* OverlookWord.swift */; };
 		121B85D72AA6C2770095FEA8 /* SwipeActions in Frameworks */ = {isa = PBXBuildFile; productRef = 121B85D62AA6C2770095FEA8 /* SwipeActions */; };
+		12E926762AA6E33700E18179 /* NativePartialSheet in Frameworks */ = {isa = PBXBuildFile; productRef = 12E926752AA6E33700E18179 /* NativePartialSheet */; };
 		12F86AF32AA226A8003FD240 /* lingoesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86AF22AA226A8003FD240 /* lingoesApp.swift */; };
 		12F86AF52AA226A8003FD240 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86AF42AA226A8003FD240 /* Persistence.swift */; };
 		12F86AF82AA226A8003FD240 /* lingoes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 12F86AF62AA226A8003FD240 /* lingoes.xcdatamodeld */; };
@@ -132,6 +133,7 @@
 			files = (
 				12F86B4E2AA376F0003FD240 /* FirebaseAnalytics in Frameworks */,
 				121B85D72AA6C2770095FEA8 /* SwipeActions in Frameworks */,
+				12E926762AA6E33700E18179 /* NativePartialSheet in Frameworks */,
 				12F86B7D2AA42F35003FD240 /* WrappingHStack in Frameworks */,
 				12F86B502AA376F0003FD240 /* FirebaseAuth in Frameworks */,
 			);
@@ -559,6 +561,7 @@
 				12F86B4F2AA376F0003FD240 /* FirebaseAuth */,
 				12F86B7C2AA42F35003FD240 /* WrappingHStack */,
 				121B85D62AA6C2770095FEA8 /* SwipeActions */,
+				12E926752AA6E33700E18179 /* NativePartialSheet */,
 			);
 			productName = lingoes;
 			productReference = 12F86AEF2AA226A8003FD240 /* lingoes.app */;
@@ -592,6 +595,7 @@
 				12F86B4C2AA376F0003FD240 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				12F86B7B2AA42F35003FD240 /* XCRemoteSwiftPackageReference "WrappingHStack" */,
 				121B85D52AA6C2770095FEA8 /* XCRemoteSwiftPackageReference "SwipeActions" */,
+				12E926742AA6E33700E18179 /* XCRemoteSwiftPackageReference "NativePartialSheet" */,
 			);
 			productRefGroup = 12F86AF02AA226A8003FD240 /* Products */;
 			projectDirPath = "";
@@ -800,6 +804,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = lingoes/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Lingoes;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -841,6 +846,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = lingoes/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Lingoes;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -899,6 +905,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		12E926742AA6E33700E18179 /* XCRemoteSwiftPackageReference "NativePartialSheet" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CoolONEOfficial/NativePartialSheet";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 		12F86B4C2AA376F0003FD240 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -922,6 +936,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 121B85D52AA6C2770095FEA8 /* XCRemoteSwiftPackageReference "SwipeActions" */;
 			productName = SwipeActions;
+		};
+		12E926752AA6E33700E18179 /* NativePartialSheet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 12E926742AA6E33700E18179 /* XCRemoteSwiftPackageReference "NativePartialSheet" */;
+			productName = NativePartialSheet;
 		};
 		12F86B4D2AA376F0003FD240 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
