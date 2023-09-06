@@ -23,8 +23,9 @@
 		128C2F302AA71628003A4845 /* DiscoveryAppBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128C2F2F2AA71628003A4845 /* DiscoveryAppBar.swift */; };
 		128C2F332AA716A0003A4845 /* DiscoverySearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128C2F322AA716A0003A4845 /* DiscoverySearch.swift */; };
 		128C2F352AA7174D003A4845 /* DiscoveryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128C2F342AA7174D003A4845 /* DiscoveryViewModel.swift */; };
+		129750692AA83FFF00A3CECA /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129750682AA83FFF00A3CECA /* Color.swift */; };
 		12BED22D2AA7315D003AAA88 /* DiscoveryRecommendation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12BED22C2AA7315D003AAA88 /* DiscoveryRecommendation.swift */; };
-		12BED22F2AA74301003AAA88 /* SnapCarouselSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12BED22E2AA74301003AAA88 /* SnapCarouselSlider.swift */; };
+		12BED22F2AA74301003AAA88 /* BasicCarouselSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12BED22E2AA74301003AAA88 /* BasicCarouselSlider.swift */; };
 		12E926762AA6E33700E18179 /* NativePartialSheet in Frameworks */ = {isa = PBXBuildFile; productRef = 12E926752AA6E33700E18179 /* NativePartialSheet */; };
 		12F86AF32AA226A8003FD240 /* lingoesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86AF22AA226A8003FD240 /* lingoesApp.swift */; };
 		12F86AF52AA226A8003FD240 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F86AF42AA226A8003FD240 /* Persistence.swift */; };
@@ -89,8 +90,9 @@
 		128C2F2F2AA71628003A4845 /* DiscoveryAppBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryAppBar.swift; sourceTree = "<group>"; };
 		128C2F322AA716A0003A4845 /* DiscoverySearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverySearch.swift; sourceTree = "<group>"; };
 		128C2F342AA7174D003A4845 /* DiscoveryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryViewModel.swift; sourceTree = "<group>"; };
+		129750682AA83FFF00A3CECA /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		12BED22C2AA7315D003AAA88 /* DiscoveryRecommendation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryRecommendation.swift; sourceTree = "<group>"; };
-		12BED22E2AA74301003AAA88 /* SnapCarouselSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapCarouselSlider.swift; sourceTree = "<group>"; };
+		12BED22E2AA74301003AAA88 /* BasicCarouselSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCarouselSlider.swift; sourceTree = "<group>"; };
 		12F86AEF2AA226A8003FD240 /* lingoes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lingoes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12F86AF22AA226A8003FD240 /* lingoesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lingoesApp.swift; sourceTree = "<group>"; };
 		12F86AF42AA226A8003FD240 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 		121B85D22AA631420095FEA8 /* Extentions */ = {
 			isa = PBXGroup;
 			children = (
+				129750682AA83FFF00A3CECA /* Color.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -365,7 +368,7 @@
 				12F86B172AA23834003FD240 /* SizeBox.swift */,
 				12F86B6B2AA40F33003FD240 /* AppBar.swift */,
 				121B85BD2AA5F5CC0095FEA8 /* ScrollOffserListener.swift */,
-				12BED22E2AA74301003AAA88 /* SnapCarouselSlider.swift */,
+				12BED22E2AA74301003AAA88 /* BasicCarouselSlider.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -677,6 +680,7 @@
 				12F86B742AA41CBA003FD240 /* IconButton.swift in Sources */,
 				12F86B422AA34AB5003FD240 /* MainTabView.swift in Sources */,
 				121B85B82AA5EE900095FEA8 /* OverlookFriends.swift in Sources */,
+				129750692AA83FFF00A3CECA /* Color.swift in Sources */,
 				121B85C72AA602580095FEA8 /* OverlookLevelItem.swift in Sources */,
 				12F86B472AA34B62003FD240 /* MainTabItem.swift in Sources */,
 				12F86AFA2AA226A8003FD240 /* ContentView.swift in Sources */,
@@ -704,7 +708,7 @@
 				12F86B272AA25BA5003FD240 /* AuthView.swift in Sources */,
 				121B85BE2AA5F5CC0095FEA8 /* ScrollOffserListener.swift in Sources */,
 				12F86B3B2AA34990003FD240 /* MainView.swift in Sources */,
-				12BED22F2AA74301003AAA88 /* SnapCarouselSlider.swift in Sources */,
+				12BED22F2AA74301003AAA88 /* BasicCarouselSlider.swift in Sources */,
 				128C2F352AA7174D003A4845 /* DiscoveryViewModel.swift in Sources */,
 				12F86B0E2AA22D0A003FD240 /* OnboardingView.swift in Sources */,
 				12F86B662AA3A094003FD240 /* Keyboard.swift in Sources */,

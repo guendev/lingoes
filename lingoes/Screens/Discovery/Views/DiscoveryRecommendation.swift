@@ -11,20 +11,19 @@ struct DiscoveryRecommendation: View {
     
     var items: [Color] = [.black, .blue, .red, .brown, .gray, .blue, .gray, .indigo, .orange]
     
-    @State var currentIndex: Int = .zero
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
-            Text("Recommend for you \(currentIndex)")
+            Text("Recommend for you")
                 .font(.headline)
                 .foregroundColor(Color("Text"))
             
-            SnapCarouselSlider(items: items, currentIndex: $currentIndex) { item in
+            BasicCarouselSlider(items: items) { item in
                 
                 item
                     .cornerRadius(20)
                 
             }
-            .slidesPerView(4.3)
+            .slidesPerView(3.3)
             .spaceBetween(16)
             .frame(height: 200)
         }
