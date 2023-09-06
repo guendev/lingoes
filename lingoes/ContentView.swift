@@ -17,11 +17,10 @@ struct ContentView: View {
         ZStack {
             
             Group {
-                if !hasShownOnboarding {
+                if hasShownOnboarding {
                     MainView()
                 } else {
-                    AuthView()
-                    // OnboardingView()
+                    OnboardingView()
                 }
             }
             

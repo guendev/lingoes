@@ -16,17 +16,20 @@ struct SizeDetectorModifier: ViewModifier {
             GeometryReader { geometry in
                 Color.clear
                     .onAppear {
-                        width = geometry.size.width
-                        height = geometry.size.height
+                        updateSize(with: geometry.size)
                     }
-                    .onChange(of: geometry.size.width) { newWidth in
-                        width = newWidth
-                    }
-                    .onChange(of: geometry.size.height) { newHeight in
-                        height = newHeight
+                    .onChange(of: geometry.size) { newSize in
+                        updateSize(with: newSize)
                     }
             }
         )
+    }
+    
+    private func updateSize(with size: CGSize) {
+        DispatchQueue.main.async {
+            width = size.width
+            height = size.height
+        }
     }
 }
 
