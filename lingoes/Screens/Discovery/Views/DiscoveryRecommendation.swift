@@ -38,14 +38,26 @@ struct DiscoveryRecommendation: View {
                             .fill(Color("Background"))
                             .frame(width: 56)
                         
-                        VStack {
+                        VStack(alignment: .leading) {
                             
                             Text(item.name)
                                 .font(.callout)
                                 .fontWeight(.medium)
                                 .foregroundColor(Color("Text"))
                             
-                            HStack(spacing: 10) {
+                            HStack(spacing: 20) {
+                                
+                                HStack(spacing: 4) {
+                                    
+                                    Image(systemName: "person")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width: 14, height: 14)
+                                    
+                                    Text("Guen")
+                                        .font(.subheadline)
+                                    
+                                }
                                 
                                 HStack(spacing: 4) {
                                     
@@ -58,8 +70,6 @@ struct DiscoveryRecommendation: View {
                                         .font(.subheadline)
                                     
                                 }
-                                
-                                SizeBox(width: 10)
                                                                 
                                 HStack(spacing: 4) {
                                     
