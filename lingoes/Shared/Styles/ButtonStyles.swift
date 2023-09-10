@@ -43,6 +43,7 @@ struct PrimaryButtonStyle: ButtonStyle, ButtonProtocol {
     var size: ButtonSize = .md
     var shape: ButtonShape = .circle
     var block: Bool = false
+    var shadow: Bool = true
     
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
@@ -53,7 +54,7 @@ struct PrimaryButtonStyle: ButtonStyle, ButtonProtocol {
             .foregroundColor(.white)
             .cornerRadius(getRadius(shape: shape))
             .scaleEffect(configuration.isPressed ? 0.98 : 1.0)
-            .shadow(color: color.opacity(0.3), radius: 20, x: 0, y: 10)
+            .shadow(color: shadow ? color.opacity(0.3) : .clear, radius: 20, x: 0, y: 10)
     }
 }
 

@@ -9,32 +9,89 @@ import SwiftUI
 
 struct RecommendationItem: Identifiable {
     var id: String = UUID().uuidString
-    var color: String
+    var name: String
 }
 
 struct DiscoveryRecommendation: View {
     
     var items: [RecommendationItem] = [
-        RecommendationItem(color: "#FFE450"),
-        RecommendationItem(color: "#ECC6C0"),
-        RecommendationItem(color: "#CDC1ED")
+        RecommendationItem(
+            name: "Cloud Ear Pink"
+        ),
+        RecommendationItem(
+            name: "Glacier Ear Blue"
+        ),
+        RecommendationItem(
+            name: "Basic slangs"
+        )
     ]
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 16) {
-            Text("Recommend for you")
-                .font(.headline)
-                .foregroundColor(Color("Text"))
+        SessionView(title: "Recommend for you") {
             
-            BasicCarouselSlider(items: items) { item in
+            VStack(spacing: 16) {
                 
-                DiscoveryRecommendationItem(item: item)
+                ForEach(items) { item in
+                    HStack(spacing: 16) {
+                        
+                        Circle()
+                            .fill(Color("Background"))
+                            .frame(width: 56)
+                        
+                        VStack {
+                            
+                            Text(item.name)
+                                .font(.callout)
+                                .fontWeight(.medium)
+                                .foregroundColor(Color("Text"))
+                            
+                            HStack(spacing: 10) {
+                                
+                                HStack(spacing: 4) {
+                                    
+                                    Image(systemName: "pencil.and.outline")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width: 14, height: 14)
+                                    
+                                    Text("160")
+                                        .font(.subheadline)
+                                    
+                                }
+                                
+                                SizeBox(width: 10)
+                                                                
+                                HStack(spacing: 4) {
+                                    
+                                    Image(systemName: "calendar")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width: 14, height: 14)
+                                    
+                                    Text("14h")
+                                        .font(.subheadline)
+                                    
+                                }
+                                
+                            }
+                            .foregroundColor(Color("Text2"))
+                            
+                        }
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        
+                    }
+                    .padding(.horizontal)
+                    .padding(.vertical)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .background {
+                        Color("Background2")
+                    }
+                    .cornerRadius(28)
+                }
                 
             }
-            .slidesPerView(2.2)
-            .spaceBetween(22)
+            
         }
-        .frame(maxWidth: .infinity, alignment: .leading)
     }
 }
 

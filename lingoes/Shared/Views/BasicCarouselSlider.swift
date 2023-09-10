@@ -23,7 +23,7 @@ struct BasicCarouselSlider<T, Content: View>: View {
     
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
-            LazyHStack(spacing: spaceBetween) {
+            HStack(spacing: spaceBetween) {
                 ForEach(items.indices, id: \.self) { index in
                     content(items[index])
                         .frame(width: getItemWidth())

@@ -26,11 +26,12 @@ struct DiscoveryView: View {
                 ScrollView(showsIndicators: false) {
                     
                     VStack(spacing: 24) {
+                        
                         DiscoverySearch()
                         
-                        DiscoveryRecommendation()
+                        DiscoveryCategories()
                         
-                        DiscoveryOnGoing()
+                        DiscoveryRecommendation()
                     }
                     .padding(.horizontal)
                     
@@ -38,6 +39,9 @@ struct DiscoveryView: View {
                 
             }
             
+        }
+        .task {
+            await viewModel.getCategories()
         }
         .environmentObject(viewModel)
     }
