@@ -9,12 +9,20 @@ import SwiftUI
 
 struct DiscoveryOnGoing: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        SessionView(title: "OnGoing") {
+            
+        }
     }
 }
 
 struct DiscoveryOnGoing_Previews: PreviewProvider {
     static var previews: some View {
-        DiscoveryOnGoing()
+        Group {
+            MainView()
+                .environment(\.colorScheme, .light)
+            
+            MainView()
+                .environment(\.colorScheme, .dark)
+        }
     }
 }

@@ -28,10 +28,11 @@ struct DiscoveryView: View {
                     VStack(spacing: 24) {
                         
                         DiscoverySearch()
-                        
+                                                
                         DiscoveryCategories()
                         
                         DiscoveryRecommendation()
+                        
                     }
                     .padding(.horizontal)
                     

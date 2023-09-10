@@ -14,7 +14,7 @@ struct DiscoveryAppBar: View {
             VStack(alignment: .leading, spacing: 8) {
                 
                 Text("Hi, Guen")
-                    .font(.headline)
+                    .font(.callout)
                     .fontWeight(.medium)
                     .foregroundColor(Color("Text2"))
                 
