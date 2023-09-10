@@ -19,8 +19,11 @@ struct MainView: View {
             
             TabView(selection: $viewModel.currentTab) {
                 
-                AnalyticView()
-                    .tag(MainTab.overview)
+                DashboardView()
+                    .tag(MainTab.dashboard)
+                
+//                AnalyticView()
+//                    .tag(MainTab.overview)
                 
                 DiscoveryView()
                     .tag(MainTab.discovery)
@@ -39,6 +42,8 @@ struct MainView: View {
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView()
+        PreviewHelper {
+            MainView()
+        }
     }
 }

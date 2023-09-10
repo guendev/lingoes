@@ -1,13 +1,13 @@
 //
-//  DiscoveryAppBar.swift
+//  DashboardAppBar.swift
 //  lingoes
 //
-//  Created by Guen on 05/09/2023.
+//  Created by Guen on 10/09/2023.
 //
 
 import SwiftUI
 
-struct DiscoveryAppBar: View {
+struct DashboardAppBar: View {
     var body: some View {
         HStack {
             
@@ -33,8 +33,8 @@ struct DiscoveryAppBar: View {
     }
 }
 
-struct DiscoveryAppBar_Previews: PreviewProvider {
+struct DashboardAppBar_Previews: PreviewProvider {
     static var previews: some View {
-        DiscoveryAppBar()
+        DashboardAppBar()
     }
 }

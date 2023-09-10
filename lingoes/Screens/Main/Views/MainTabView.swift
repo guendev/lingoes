@@ -12,9 +12,9 @@ struct MainTabView: View {
     @EnvironmentObject var viewModel: MainViewModel
     
     var tabs: [MainTabItem] = [
-        MainTabItem(tab: .vocabularies, icon: "Chart", activeIcon: "ChartBold"),
-        MainTabItem(tab: .overview, icon: "Home", activeIcon: "HomeBold"),
+        MainTabItem(tab: .dashboard, icon: "Chart", activeIcon: "ChartBold"),
         MainTabItem(tab: .discovery, icon: "Search", activeIcon: "SearchBold"),
+        MainTabItem(tab: .overview, icon: "Home", activeIcon: "HomeBold"),
         MainTabItem(tab: .settings, icon: "Profile", activeIcon: "ProfileBold")
     ]
     
