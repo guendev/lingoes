@@ -29,6 +29,8 @@ struct DiscoveryView: View {
                         DiscoverySearch()
                         
                         DiscoveryRecommendation()
+                        
+                        DiscoveryOnGoing()
                     }
                     .padding(.horizontal)
                     

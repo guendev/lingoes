@@ -7,9 +7,18 @@
 
 import SwiftUI
 
+struct RecommendationItem: Identifiable {
+    var id: String = UUID().uuidString
+    var color: String
+}
+
 struct DiscoveryRecommendation: View {
     
-    var items: [Color] = [.black, .blue, .red, .brown, .gray, .blue, .gray, .indigo, .orange]
+    var items: [RecommendationItem] = [
+        RecommendationItem(color: "#FFE450"),
+        RecommendationItem(color: "#ECC6C0"),
+        RecommendationItem(color: "#CDC1ED")
+    ]
     
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
@@ -19,13 +28,11 @@ struct DiscoveryRecommendation: View {
             
             BasicCarouselSlider(items: items) { item in
                 
-                item
-                    .cornerRadius(20)
+                DiscoveryRecommendationItem(item: item)
                 
             }
-            .slidesPerView(3.3)
-            .spaceBetween(16)
-            .frame(height: 200)
+            .slidesPerView(2.2)
+            .spaceBetween(22)
         }
         .frame(maxWidth: .infinity, alignment: .leading)
     }
