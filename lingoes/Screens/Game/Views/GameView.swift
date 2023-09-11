@@ -28,6 +28,7 @@ struct GameView: View {
                 .frame(maxWidth: .infinity)
                 .overlay(alignment: .bottom) {
                     GameContinue()
+                        .hidden()
                 }
             }
             
