@@ -57,29 +57,27 @@ struct GamePickUpFromImages: View {
                     
                     Sizeable { size in
                         
-                        Button {
-                            
-                            selectAnswer(answer)
-                            
-                        } label: {
-                            
-                            Rectangle()
-                                .fill(.clear)
-                                .frame(width: size.width, height: size.width)
-                                .overlay {
-                                    
-                                    Image(answer.image)
-                                        .resizable()
-                                        .scaledToFit()
-                                    
-                                }
-                                .opacity(getOpacity(answer))
-                                .blur(radius: getBlur(answer))
-                                .brightness(answer.id == selectedAnswer?.id ? -0.1 : 0)
-                                .clipShape(RoundedRectangle(cornerRadius: 15))
-                            
-                        }
-                        .buttonStyle(.plain)
+                        RoundedRectangle(cornerRadius: 15)
+                            .fill(Color("Background2"))
+                            .frame(width: size.width, height: size.width)
+                            .overlay {
+                                
+                                Image(answer.image)
+                                    .resizable()
+                                    .scaledToFit()
+                                    .blur(radius: getBlur(answer))
+                                    .clipShape(RoundedRectangle(cornerRadius: 15))
+                                
+                            }
+                            .opacity(getOpacity())
+                            .overlay {
+                                
+                                RoundedRectangle(cornerRadius: 15)
+                                    .fill(.clear)
+                            }
+                            .onTapGesture {
+                                selectAnswer(answer)
+                            }
                     }
                     
                 }
@@ -109,18 +107,16 @@ struct GamePickUpFromImages: View {
         }
     }
     
-    func getOpacity(_ answer: GamePickUpFromImagesItem) -> CGFloat {
-        if selectedAnswer == nil {
-            return 1
-        }
-        return answer.id == selectedAnswer?.id ? 1 : 0.4
+    func getOpacity() -> CGFloat {
+        selectedAnswer == nil ? 1 : 0.7
     }
     
     func getBlur(_ answer: GamePickUpFromImagesItem) -> CGFloat {
-        if selectedAnswer == nil {
-            return 0
-        }
-        return answer.id == selectedAnswer?.id ? 5 : 0
+        answer.id == selectedAnswer?.id ? 5 : 0
+    }
+    
+    func getBrightness(_ answer: GamePickUpFromImagesItem) -> CGFloat {
+        answer.id == selectedAnswer?.id ? -0.1 : 0
     }
 }
 
