@@ -14,20 +14,24 @@ struct GamePickUpFromImagesItem: Identifiable {
 
 struct GamePickUpFromImages: View {
     
+    let columns: [GridItem] = [
+        GridItem(.flexible(maximum: 120), spacing: 32),
+        GridItem(.flexible(maximum: 120), spacing: 32)
+    ]
+    
     var items: [GamePickUpFromImagesItem] = [
         GamePickUpFromImagesItem(id: "1", image: "avatar"),
         GamePickUpFromImagesItem(id: "2", image: "avatar"),
         GamePickUpFromImagesItem(id: "3", image: "avatar"),
         GamePickUpFromImagesItem(id: "4", image: "avatar")
     ]
-    var correctId: String = "1"
+    var correctAnswer = GamePickUpFromImagesItem(id: "1", image: "avatar")
     
-    let columns: [GridItem] = [
-        GridItem(.flexible(maximum: 120), spacing: 32),
-        GridItem(.flexible(maximum: 120), spacing: 32)
-    ]
+    @State var selectedAnswer: GamePickUpFromImagesItem?
     
-    @State var selectedId: String = ""
+    
+    var onCorrect: (_ answer: GamePickUpFromImagesItem) -> Void
+    var onError: (_ selected: GamePickUpFromImagesItem, _ answer: GamePickUpFromImagesItem) -> Void
     
     var body: some View {
         VStack(spacing: 0) {
@@ -69,54 +73,55 @@ struct GamePickUpFromImages: View {
                                         .scaledToFit()
                                     
                                 }
+                                .opacity(getOpacity(answer))
+                                .blur(radius: getBlur(answer))
+                                .brightness(answer.id == selectedAnswer?.id ? -0.1 : 0)
                                 .clipShape(RoundedRectangle(cornerRadius: 15))
                             
                         }
                         .buttonStyle(.plain)
-                        .opacity(getOpacity(answer))
-                        .blur(radius: getBlur(answer))
-                        .brightness(answer.id == selectedId ? -0.1 : 0)
-                        .clipShape(RoundedRectangle(cornerRadius: 15))
-                        
                     }
                     
                 }
             }
-            
-            Text(selectedId)
         }
     }
     
     func selectAnswer(_ answer: GamePickUpFromImagesItem) -> Void {
-        if selectedId.isEmpty {
+        if selectedAnswer != nil {
+            return
+        }
+        withAnimation {
+            selectedAnswer = answer
+        }
+        
+        if selectedAnswer!.id == correctAnswer.id {
+            onCorrect(correctAnswer)
+        } else {
+            onError(selectedAnswer!, correctAnswer)
+        }
+        
+        // TODO: Add config
+        Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { _ in
             withAnimation {
-                selectedId = answer.id
-            }
-            Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { _ in
-                withAnimation {
-                    selectedId = ""
-                }
+                selectedAnswer = nil
             }
         }
     }
     
     func getOpacity(_ answer: GamePickUpFromImagesItem) -> CGFloat {
-        if selectedId.isEmpty {
+        if selectedAnswer == nil {
             return 1
         }
-        return answer.id == selectedId ? 1 : 0.4
+        return answer.id == selectedAnswer?.id ? 1 : 0.4
     }
     
     func getBlur(_ answer: GamePickUpFromImagesItem) -> CGFloat {
-        if selectedId.isEmpty {
+        if selectedAnswer == nil {
             return 0
         }
-        return answer.id == selectedId ? 5 : 0
+        return answer.id == selectedAnswer?.id ? 5 : 0
     }
-}
-
-extension GamePickUpFromImages {
-    
 }
 
 struct GameImageText_Previews: PreviewProvider {

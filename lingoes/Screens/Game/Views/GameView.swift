@@ -21,7 +21,11 @@ struct GameView: View {
                 
                 ScrollView(showsIndicators: false) {
                     
-                    GamePickUpFromImages()
+                    GamePickUpFromImages { answer in
+                        
+                    } onError: { selected, answer in
+                        
+                    }
                     
                 }
                 .padding(.horizontal)
