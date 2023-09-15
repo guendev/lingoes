@@ -7,18 +7,18 @@
 
 import SwiftUI
 
-struct GameImageTextItem: Identifiable {
+struct GamePickUpFromImagesItem: Identifiable {
     var id: String = UUID().uuidString
     var image: String
 }
 
-struct GameImageText: View {
+struct GamePickUpFromImages: View {
     
-    var items: [GameImageTextItem] = [
-        GameImageTextItem(id: "1", image: "avatar"),
-        GameImageTextItem(id: "2", image: "avatar"),
-        GameImageTextItem(id: "3", image: "avatar"),
-        GameImageTextItem(id: "4", image: "avatar")
+    var items: [GamePickUpFromImagesItem] = [
+        GamePickUpFromImagesItem(id: "1", image: "avatar"),
+        GamePickUpFromImagesItem(id: "2", image: "avatar"),
+        GamePickUpFromImagesItem(id: "3", image: "avatar"),
+        GamePickUpFromImagesItem(id: "4", image: "avatar")
     ]
     var correctId: String = "1"
     
@@ -36,7 +36,7 @@ struct GameImageText: View {
             
             VStack(spacing: 5) {
                 
-                Text("What is")
+                Text("Which is")
                     .font(.body)
                     .foregroundColor(Color("Text2"))
                 
@@ -87,7 +87,7 @@ struct GameImageText: View {
         }
     }
     
-    func selectAnswer(_ answer: GameImageTextItem) -> Void {
+    func selectAnswer(_ answer: GamePickUpFromImagesItem) -> Void {
         if selectedId.isEmpty {
             withAnimation {
                 selectedId = answer.id
@@ -100,14 +100,14 @@ struct GameImageText: View {
         }
     }
     
-    func getOpacity(_ answer: GameImageTextItem) -> CGFloat {
+    func getOpacity(_ answer: GamePickUpFromImagesItem) -> CGFloat {
         if selectedId.isEmpty {
             return 1
         }
         return answer.id == selectedId ? 1 : 0.4
     }
     
-    func getBlur(_ answer: GameImageTextItem) -> CGFloat {
+    func getBlur(_ answer: GamePickUpFromImagesItem) -> CGFloat {
         if selectedId.isEmpty {
             return 0
         }
@@ -115,7 +115,7 @@ struct GameImageText: View {
     }
 }
 
-extension GameImageText {
+extension GamePickUpFromImages {
     
 }
 

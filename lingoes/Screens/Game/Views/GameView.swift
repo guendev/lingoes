@@ -21,7 +21,7 @@ struct GameView: View {
                 
                 ScrollView(showsIndicators: false) {
                     
-                    GameImageText()
+                    GamePickUpFromImages()
                     
                 }
                 .padding(.horizontal)
