@@ -19,6 +19,9 @@
 		121B85CE2AA60B4D0095FEA8 /* DottedLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121B85CD2AA60B4D0095FEA8 /* DottedLine.swift */; };
 		121B85D02AA62FA20095FEA8 /* OverlookWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121B85CF2AA62FA20095FEA8 /* OverlookWord.swift */; };
 		121B85D72AA6C2770095FEA8 /* SwipeActions in Frameworks */ = {isa = PBXBuildFile; productRef = 121B85D62AA6C2770095FEA8 /* SwipeActions */; };
+		1284EA432AB6F21800140F92 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1284EA422AB6F21800140F92 /* GameViewModel.swift */; };
+		1284EA452AB6F56A00140F92 /* GameAnswerStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1284EA442AB6F56A00140F92 /* GameAnswerStatus.swift */; };
+		1284EA472AB6F7D700140F92 /* GameAnswerAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1284EA462AB6F7D700140F92 /* GameAnswerAction.swift */; };
 		128C2F2E2AA6F6DE003A4845 /* DiscoveryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128C2F2D2AA6F6DE003A4845 /* DiscoveryView.swift */; };
 		128C2F302AA71628003A4845 /* DiscoveryAppBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128C2F2F2AA71628003A4845 /* DiscoveryAppBar.swift */; };
 		128C2F332AA716A0003A4845 /* DiscoverySearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128C2F322AA716A0003A4845 /* DiscoverySearch.swift */; };
@@ -99,6 +102,9 @@
 		121B85C62AA602580095FEA8 /* OverlookLevelItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlookLevelItem.swift; sourceTree = "<group>"; };
 		121B85CD2AA60B4D0095FEA8 /* DottedLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DottedLine.swift; sourceTree = "<group>"; };
 		121B85CF2AA62FA20095FEA8 /* OverlookWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlookWord.swift; sourceTree = "<group>"; };
+		1284EA422AB6F21800140F92 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		1284EA442AB6F56A00140F92 /* GameAnswerStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameAnswerStatus.swift; sourceTree = "<group>"; };
+		1284EA462AB6F7D700140F92 /* GameAnswerAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameAnswerAction.swift; sourceTree = "<group>"; };
 		128C2F2D2AA6F6DE003A4845 /* DiscoveryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryView.swift; sourceTree = "<group>"; };
 		128C2F2F2AA71628003A4845 /* DiscoveryAppBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryAppBar.swift; sourceTree = "<group>"; };
 		128C2F322AA716A0003A4845 /* DiscoverySearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverySearch.swift; sourceTree = "<group>"; };
@@ -304,6 +310,7 @@
 				1296D0282AADFE4B003F374F /* GameAppBar.swift */,
 				1296D02C2AAE03FB003F374F /* GameContinue.swift */,
 				1296D02E2AAE0629003F374F /* GamePickUpFromImages.swift */,
+				1284EA462AB6F7D700140F92 /* GameAnswerAction.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -311,6 +318,7 @@
 		1296D0242AADFDA4003F374F /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				1284EA422AB6F21800140F92 /* GameViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -318,6 +326,7 @@
 		1296D0252AADFDAB003F374F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1284EA442AB6F56A00140F92 /* GameAnswerStatus.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -748,6 +757,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1284EA472AB6F7D700140F92 /* GameAnswerAction.swift in Sources */,
 				12F86B882AA47541003FD240 /* SettingMenuItem.swift in Sources */,
 				12F86AF32AA226A8003FD240 /* lingoesApp.swift in Sources */,
 				128C2F302AA71628003A4845 /* DiscoveryAppBar.swift in Sources */,
@@ -813,9 +823,11 @@
 				12F86B622AA38C2E003FD240 /* ToastViewModel.swift in Sources */,
 				12F86AF52AA226A8003FD240 /* Persistence.swift in Sources */,
 				121B85CE2AA60B4D0095FEA8 /* DottedLine.swift in Sources */,
+				1284EA432AB6F21800140F92 /* GameViewModel.swift in Sources */,
 				12F86B782AA41F57003FD240 /* SettingsOverview.swift in Sources */,
 				1296D0292AADFE4B003F374F /* GameAppBar.swift in Sources */,
 				121B85C52AA5FF9F0095FEA8 /* Level.swift in Sources */,
+				1284EA452AB6F56A00140F92 /* GameAnswerStatus.swift in Sources */,
 				12A8445A2AA8EC4F00D3AE53 /* SessionView.swift in Sources */,
 				129828C82AADC3E900B02502 /* Sizeable.swift in Sources */,
 			);

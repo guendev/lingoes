@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct GameAppBar: View {
+    @EnvironmentObject var viewModel: GameViewModel
+    
     var body: some View {
         VStack(spacing: 10) {
             
@@ -26,7 +28,7 @@ struct GameAppBar: View {
                 Spacer()
                 
                 HStack(spacing: 4) {
-                    Text("36")
+                    Text("\(viewModel.exp)")
                         .font(.footnote)
                         .fontWeight(.medium)
                     

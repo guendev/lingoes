@@ -8,35 +8,38 @@
 import SwiftUI
 
 struct GameView: View {
+    
+    @StateObject var viewModel: GameViewModel = .init()
+    
     var body: some View {
         ZStack {
             
             Color("Background")
                 .edgesIgnoringSafeArea(.all)
             
-            VStack(spacing: 10) {
-                
+            VStack(spacing: 20) {
+                                    
                 GameAppBar()
-                    .padding([.horizontal, .bottom])
+                    .padding([.bottom])
+                    .sizeDetector(height: $viewModel.appBarHeight)
                 
-                ScrollView(showsIndicators: false) {
+                Group {
                     
-                    GamePickUpFromImages { answer in
-                        
-                    } onError: { selected, answer in
-                        
-                    }
+                    GamePickUpFromImages()
                     
                 }
-                .padding(.horizontal)
-                .frame(maxWidth: .infinity)
-                .overlay(alignment: .bottom) {
+                .sizeDetector(height: $viewModel.gameHight)
+            }
+            .padding(.horizontal)
+            .frame(maxHeight: .infinity, alignment: .top)
+            .overlay(alignment: .bottom) {
+                if viewModel.answerStatus == .next {
                     GameContinue()
-                        .hidden()
                 }
             }
             
         }
+        .environmentObject(viewModel)
     }
 }
 

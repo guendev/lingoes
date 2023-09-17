@@ -14,6 +14,8 @@ struct GamePickUpFromImagesItem: Identifiable {
 
 struct GamePickUpFromImages: View {
     
+    @EnvironmentObject var viewModel: GameViewModel
+    
     let columns: [GridItem] = [
         GridItem(.flexible(maximum: 120), spacing: 32),
         GridItem(.flexible(maximum: 120), spacing: 32)
@@ -29,16 +31,9 @@ struct GamePickUpFromImages: View {
     
     @State var selectedAnswer: GamePickUpFromImagesItem?
     
-    
-    var onCorrect: (_ answer: GamePickUpFromImagesItem) -> Void
-    var onError: (_ selected: GamePickUpFromImagesItem, _ answer: GamePickUpFromImagesItem) -> Void
-    
     var body: some View {
         VStack(spacing: 0) {
-            
-            SizeBox(height: 20)
-            
-            Text("Which is")
+            Text("Which is the correct IMAGE?")
                 .font(.body)
                 .foregroundColor(Color("Text2"))
             
@@ -113,9 +108,17 @@ struct GamePickUpFromImages: View {
         }
         
         if selectedAnswer!.id == correctAnswer.id {
-            onCorrect(correctAnswer)
+            
+            withAnimation {
+                viewModel.exp += 10
+                
+                viewModel.answerStatus = .correct
+            }
+            
         } else {
-            onError(selectedAnswer!, correctAnswer)
+            withAnimation {
+                viewModel.answerStatus = .error
+            }
         }
     }
 }
