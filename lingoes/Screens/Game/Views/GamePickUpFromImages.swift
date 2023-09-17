@@ -36,59 +36,78 @@ struct GamePickUpFromImages: View {
     var body: some View {
         VStack(spacing: 0) {
             
-            SizeBox(height: 30)
+            SizeBox(height: 20)
             
-            VStack(spacing: 5) {
-                
-                Text("Which is")
-                    .font(.body)
-                    .foregroundColor(Color("Text2"))
-                
-                Text("\"Apple\"")
-                    .font(.title2)
-                    .fontWeight(.semibold)
-                    .foregroundColor(Color("Text"))
-            }
+            Text("Which is")
+                .font(.body)
+                .foregroundColor(Color("Text2"))
             
-            SizeBox(height: 30)
+            SizeBox(height: 20)
             
-            LazyVGrid(columns: columns, spacing: 32) {
-                ForEach(items) { answer in
-                    
-                    Sizeable { size in
+            Sizeable { size in
+                RoundedRectangle(cornerRadius: 15)
+                    .fill(Color("Background2"))
+                    .frame(width: size.width, height: size.width)
+                    .overlay {
                         
-                        RoundedRectangle(cornerRadius: 15)
-                            .fill(Color("Background2"))
-                            .frame(width: size.width, height: size.width)
-                            .overlay {
-                                
-                                Image(answer.image)
-                                    .resizable()
-                                    .scaledToFit()
-                                    .blur(radius: getBlur(answer))
-                                    .clipShape(RoundedRectangle(cornerRadius: 15))
-                                
-                            }
-                            .opacity(getOpacity())
-                            .overlay {
-                                
-                                RoundedRectangle(cornerRadius: 15)
-                                    .fill(.clear)
-                            }
-                            .onTapGesture {
-                                selectAnswer(answer)
-                            }
+                        Image(correctAnswer.image)
+                            .resizable()
+                            .scaledToFit()
+                            .clipShape(RoundedRectangle(cornerRadius: 15))
+                        
                     }
-                    
+                    .overlay {
+                        
+                        if selectedAnswer == nil {
+                            ZStack {
+                                
+                                Color.clear
+                                    .background(.ultraThinMaterial)
+                                
+                                Text("Apple")
+                                    .font(.title2)
+                                    .fontWeight(.semibold)
+                                
+                            }
+                        }
+                        
+                    }
+                    .clipShape(RoundedRectangle(cornerRadius: 15))
+            }
+            .frame(maxWidth: 120 * 2 + 32)
+            
+            
+            if selectedAnswer == nil {
+                LazyVGrid(columns: columns, spacing: 32) {
+                    ForEach(items) { answer in
+                        
+                        Sizeable { size in
+                            
+                            RoundedRectangle(cornerRadius: 15)
+                                .fill(Color("Background2"))
+                                .frame(width: size.width, height: size.width)
+                                .overlay {
+                                    
+                                    Image(answer.image)
+                                        .resizable()
+                                        .scaledToFit()
+                                        .clipShape(RoundedRectangle(cornerRadius: 15))
+                                    
+                                }
+                                .onTapGesture {
+                                    selectAnswer(answer)
+                                }
+                        }
+                        
+                    }
                 }
+                .padding(.top, 30)
             }
         }
+        .frame(maxWidth: .infinity)
     }
     
     func selectAnswer(_ answer: GamePickUpFromImagesItem) -> Void {
-        if selectedAnswer != nil {
-            return
-        }
         withAnimation {
             selectedAnswer = answer
         }
@@ -98,25 +117,6 @@ struct GamePickUpFromImages: View {
         } else {
             onError(selectedAnswer!, correctAnswer)
         }
-        
-        // TODO: Add config
-        Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { _ in
-            withAnimation {
-                selectedAnswer = nil
-            }
-        }
-    }
-    
-    func getOpacity() -> CGFloat {
-        selectedAnswer == nil ? 1 : 0.7
-    }
-    
-    func getBlur(_ answer: GamePickUpFromImagesItem) -> CGFloat {
-        answer.id == selectedAnswer?.id ? 5 : 0
-    }
-    
-    func getBrightness(_ answer: GamePickUpFromImagesItem) -> CGFloat {
-        answer.id == selectedAnswer?.id ? -0.1 : 0
     }
 }
 
